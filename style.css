@@ -9,7 +9,6 @@
 #id2,
 #id3,
 #id4{
-position: absolute;
 width: 139px;
 height: 32px;
 background: #AAA6A6;
@@ -32,41 +31,11 @@ color: #000000;
 
 
 
-#id1{
-/* Login */
-
-left: 375px;
-top: 112px;
 
 
 
-}
-#id2{
-    /* Contribute  */
-left: 563px;
-top: 112px;
-}
-#id3{
-    /* Concept */
-
-left: 746px;
-top: 112px;
-}
-#id4{
-    /* About */
-left: 934px;
-top: 112px;
 
 
-}
-#top{
-    /* Group */
-
-width: 706px;
-height: 108px;
-
-margin-left: 25%;
-}
 #mid{
     /* CentreGroup */
 
@@ -81,13 +50,8 @@ margin-left: 5%
 
 #id5,
 #id6{
-    position: absolute;
     width: 350px;
     height: 150px;
-    left:40%;
-    right:20%;
-    bottom:5%;
-    top:437px;
     font-size: 48px;
 
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #827C7C;
@@ -112,36 +76,30 @@ position: relative
 
 #id5{
 /* Host */
-left: 207px;
+margin-left: 27%;
 }
 #id6{
 /* Share Garden */
-left: 898px;
+margin-left: 27%;
 }
 
 #png1,
 #png2{
     /* image size */
 
-    position: absolute;
-    width: 350px;
-    height: 236px;
-    top:603px;
+display: block;
+margin-left:auto;
+margin-right:auto;
+max-width: 100%;
+height: auto;
 }
-#png1{ /* position */
-    left: 207px;
-}
-#png2{
-    left: 898px;
-}
+
 
 
 
 
 #toplogo {
-    float: left;
-    clear: both;
-    display: inline-block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -150,9 +108,106 @@ left: 898px;
 }
 
 
-.navigation_bar {
-    width: 100%;
-    text-decoration: none;
-    padding: 10px;
-    
+
+
+#primary_div {
+opacity: 0.8;
+padding-top: 1.25%;
 }
+
+
+
+nav { 
+font-family: Arial, sans-serif;
+letter-spacing: 0.25em;
+list-style-type: none;
+text-decoration: none;
+opacity: 0.95;
+padding-bottom: 2%;
+}
+
+nav ul {
+padding: 0;
+margin: 0;
+list-style-type:none;
+text-decoration: none;
+margin-left: 0.2%;
+padding-top: 2%;
+padding-bottom: 2%;
+text-align: center;
+
+}
+
+nav li {
+padding: 5%;
+text-decoration: none;
+margin-bottom: 20%;
+font-weight: bold;
+display: inline;
+
+}
+
+nav a {
+font-weight: bold;
+font-size: 1.5em;
+text-decoration: none;
+color: white;
+padding-right: 1%;
+}
+
+.nav_button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+
+#header_layout {
+border-bottom: solid;
+border-color: white;
+margin-top: 3%;
+background-color: black;
+opacity: 0.95;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-font {
+font-family: Arial, sans-serif;
+color: white;
+font-size: 1.3em;
+line-height: 2em;
+
+}
+
+p {
+    
+font-family: Arial, sans-serif;  
+font-size: 1.1em;
+color: black;
+line-height: 2em;
+padding-left: 2%;
+padding-right: 2%;
+text-align: left;
+
+}
+
+
+
