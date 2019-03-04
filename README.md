@@ -1,2 +1,2 @@
-# projectX
-A practice repo to learning version control
+# COMP1930 - Project
+ShareGarden Project Repo
