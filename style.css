@@ -1,3 +1,27 @@
+.btn-group button {
+  background-color: #4CAF50;
+  border: 1px solid green; 
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
 .wrapper {
     width: 80%;
     margin-left: auto;
@@ -13,10 +37,12 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  padding: 25px 45px;
 }
 
 .active, .collapsible {
-  background-color: white
+  background-color: white;
+  opacity: 0.3;
 }
 
 .content {
@@ -96,13 +122,16 @@ position: relative
 
 #id5{
 /* Host */
-margin-left: 3%;
-margin-bottom: 3%;
+margin-top: 15%;
+margin: 3%;
+background-color: #4CAF50
+
 }
 #id6{
 /* Share Garden */
-margin-left: 3%;
-margin-bottom: 3%;
+margin: 3%;
+background-color: #4CAF50
+
 }
 
 #png1,
@@ -113,9 +142,10 @@ display: block;
 margin-left:auto;
 margin-right:auto;
 max-width: 100%;
-height: auto;
+height: 300px;
+width: 450px;
+border-radius: 3%;
 }
-
 
 
 
@@ -161,7 +191,7 @@ text-align: center;
 }
 
 nav li {
-padding: 5%;
+padding: 3%;
 text-decoration: none;
 margin-bottom: 20%;
 font-weight: bold;
@@ -200,17 +230,6 @@ opacity: 0.95;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .list-font {
 font-family: Arial, sans-serif;
 color: white;
@@ -221,8 +240,13 @@ line-height: 2em;
 
 p {
 
+<<<<<<< HEAD
 font-family: Roboto;
 font-size: 1.1em;
+=======
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+>>>>>>> cf28efaf68833f794f1927bb5e00a761b045c512
 color: black;
 line-height: 2em;
 padding-left: 2%;
