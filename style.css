@@ -1,6 +1,15 @@
+.bottomright{
+  float:right;
+  margin-right: 2%;
+}
+button:hover{
+  background-color: #grey; /* Green */
+  color: green;
+  cursor: pointer;
+}
 .btn-group button {
   background-color: #4CAF50;
-  border: 1px solid green; 
+  border: 1px solid green;
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
