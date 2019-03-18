@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -108,3 +109,114 @@ fieldset {
 </body>
 
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create a New Account</title>
+    <style>
+
+fieldset {
+    clear: left;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 8px ridge black;
+}
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Create New Account</h1>
+
+        <form name="survey" method="post" id="survey" action="http://webdevbasics.net/scripts/demo.php">
+            <label>Name:
+                <input type="text" name="person_name" id="person_name" required="required"> </label>
+            <label>Email:
+                <input type="email" name="person_email" id="person_email" required="required"> </label>
+
+             <fieldset>
+                <legend>Are you interested in donating produce or picking up produce?</legend>
+
+                <label>
+                    <input type="radio" name="donating" id="donating" value="Donating"> Donating </label>
+
+                <label>
+                    <input type="radio" name="picking_up" id="picking_up" value="Picking Up"> Picking Up </label>
+
+            </fieldset>           
+            
+            
+            
+            <fieldset>
+                <legend>Please select the type of produce you are interested in providing OR picking up</legend>
+
+                <label>
+                    <input type="checkbox" name="Carrots" id="Carrots" value="yes"> Carrots </label>
+
+                <label>
+                    <input type="checkbox" name="Potatoes" id="Potatoes" value="yes"> Potatos </label>
+
+                <label>
+                    <input type="checkbox" name="Beets" id="Beets" value="yes"> Beets </label>
+
+                <label>
+                    <input type="checkbox" name="Yams" id="Yams" value="yes"> Yams </label>
+
+                <label>
+                    <input type="checkbox" name="Other" id="Other" value="yes"> Other </label>
+
+            </fieldset>
+
+
+            <h3>Select the times you are available to pickup your produce</h3>
+            <select size="5" name="select_menu" id="select_menu">
+                <option value="7AM">7:00 AM</option>
+                <option value="730AM">7:30 AM</option>
+                <option value="8AM">8:00 AM</option>
+                <option value="830AM">8:30 AM</option>
+                <option value="9AM">9:00 AM</option>
+                <option value="930AM">9:30 AM</option>
+                <option value="10AM">10:00 AM</option>
+                <option value="1030AM">10:30 AM</option>
+                <option value="11AM">11:00 AM</option>
+                <option value="1130AM">11:30 AM</option>
+                <option value="12PM">12:00 PM</option>
+                <option value="1230PM">12:30 PM</option>
+                <option value="1PM">1:00 PM</option>
+                <option value="130PM">1:30 PM</option>
+                <option value="2PM">2:00 PM</option>
+                <option value="230PM">2:30 PM</option>
+                <option value="3PM">3:00 PM</option>
+                <option value="330PM">3:30 PM</option>
+                <option value="4PM">4:00 PM</option>
+                <option value="430PM">4:30 PM</option>
+                <option value="5PM">5:00 PM</option>
+                <option value="530PM">5:30 PM</option>
+                <option value="6PM">6:00 PM</option>
+                <option value="630PM">6:30 PM</option>
+                <option value="7PM">7:00 PM</option>
+                <option value="730PM">7:30 PM</option>
+                <option value="8PM">8:00 PM</option>
+                <option value="830PM">8:30 PM</option>
+                <option value="9PM">9:00 PM</option>
+
+            </select>
+
+            <h3>Any other information you'd like to provide about yourself</h3>
+            <textarea name="role" id="role" cols="60" rows="3"></textarea>
+
+            <div class="button_align">
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
+>>>>>>> 3cd18c0bfc3ec919af75d03d0883e367940cd138
