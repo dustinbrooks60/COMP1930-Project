@@ -8,6 +8,16 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="style.css" />
+    
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+
+
 </head>
     
 <body id="wrapper">
@@ -72,6 +82,30 @@
        });
    };
    </script>
+    
+    
+<div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Vancouver
+  var vancouver = {lat: 49.246292, lng: -123.116226};
+  // The map, centered at Vancouver
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: vancouver});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: vancouver, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?lib=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&callback=initMap">
+    </script>
+
 
 </body>
 </html>
