@@ -17,12 +17,21 @@ for (i = 0; i < coll.length; i++) {
 // Add active class to the current button (highlight it)
 var group1 = document.getElementById("grpDIV1");
 var btns = group1.getElementsByClassName("btn");
+var this_array = []
+
+function appendArray(string_text, user_array){ // make sure append max is length 3
+  if (user_array.length < 3){
+    user_array.push(string_text);
+  }
+  console.log(user_array);
+  }
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
   let current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
+  appendArray(this.innerText, this_array);
   });
 }
 
@@ -34,6 +43,7 @@ for (let j = 0; j < btns2.length; j++) {
   let current = document.getElementsByClassName("active");
   current[1].className = current[1].className.replace(" active", "");
   this.className += " active";
+  appendArray(this.innerText, this_array);
   });
 }
 
@@ -46,5 +56,10 @@ for (let i = 0; i < btns3.length; i++) {
   let current = document.getElementsByClassName("active");
   current[2].className = current[2].className.replace(" active", "");
   this.className += " active";
+  appendArray(this.innerText, this_array);
   });
+  
 }
+
+
+

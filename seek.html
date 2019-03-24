@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShareGarden - Seek</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCRNyjKsPc9-5T0D3NHXiqDnqU8x93XwSk",
+    authDomain: "sharegarden-d68ce.firebaseapp.com",
+    databaseURL: "https://sharegarden-d68ce.firebaseio.com",
+    projectId: "sharegarden-d68ce",
+    storageBucket: "sharegarden-d68ce.appspot.com",
+    messagingSenderId: "337652476919"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <style>
       #header{
@@ -54,28 +69,47 @@
         <h1 id = "header"> Choose a plan </h1>
         <h2> Produce Plan </h2>
           <div class="btn-group" id = "grpDIV1">
-          <button class = "selection active btn"> Pick-up Once </button>
-          <button class = "selection btn"> Pick-up Weekly </button>
-          <button class = "selection btn"> Pick-up Monthly </button>
-          <button class = "selection btn"> Contribute to Garden </button>
+          
+         
+          <p id ='txt0'><button class = "selection active btn">Pick-up Once </button> </p>
+          <p id ='txt1'><button class = "selection btn"> Pick-up Weekly </button> </p>
+          <p id ='txt2'><button class = "selection btn"> Pick-up Monthly </button> </p>
+          <p id ='txt3'><button class = "selection btn"> Contribute to Garden </button> </p>
+
+        
         </div>
         <h2> Produce Type </h2>
 
         <div class="btn-group" id = "grpDIV2">
-        <button class = "selection btn2 active"> Fruits </button>
-        <button class = "selection btn2"> Vegetables </button>
-        <button class = "selection btn2"> Fruits & Vegetables </button>
-
+            
+          <p id ='txt4'><button class = "selection btn2 active"> Fruits </button> </p>
+          <p id ='txt5'><button class = "selection btn2"> Vegetables </button> </p>
+          <p id ='txt6'><button class = "selection btn2"> Fruits & Vegetables </button> </p>
+            
         </div>
         <h2> Select Quantity </h2>
         <div class="btn-group" id = "grpDIV3">
-        <button class = "selection btn3 active"> Feed for 1 </button>
-        <button class = "selection btn3"> Feed for 2-3 </button>
-        <button class = "selection btn3"> Feed for 4-5 </button>
+          
+          <p id ='txt7'><button class = "selection btn3 active"> Feed for 1 </button> </p>
+          <p id ='txt8'><button class = "selection btn3"> Feed for 2-3 </button> </p>
+          <p id ='txt9'><button class = "selection btn3"> Feed for 4-5 </button> </p>
+
         </div>
 
-        <button class ="bottomright" style="height:32px;width:128px;"> Submit </button>
+        <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
 
-        <script src = "jsfile.js"> </script>
+        <script src = "jsfile.js"> 
+        // console.log(this_array);
+        // function submit(){
+        //   firebase.database().ref("users/" + "new_test").set({
+        //     "ProducePlan": this_array[0],
+        //     "ProduceType": this_array[1],
+        //     "Quanitity": this_array[2]
+        //   });
+        //   }
+        //   submit();
+        // ** will need to figure out how to get the array to add to database.
+          </script>
+
       </body>
 </html>
