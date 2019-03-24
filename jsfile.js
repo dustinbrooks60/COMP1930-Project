@@ -31,6 +31,7 @@ for (let i = 0; i < btns.length; i++) {
   let current = document.getElementsByClassName("active");
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
+  console.log(this.innerText);
   appendArray(this.innerText, this_array);
   });
 }
@@ -43,6 +44,7 @@ for (let j = 0; j < btns2.length; j++) {
   let current = document.getElementsByClassName("active");
   current[1].className = current[1].className.replace(" active", "");
   this.className += " active";
+  console.log(this.innerText);
   appendArray(this.innerText, this_array);
   });
 }
@@ -56,6 +58,7 @@ for (let i = 0; i < btns3.length; i++) {
   let current = document.getElementsByClassName("active");
   current[2].className = current[2].className.replace(" active", "");
   this.className += " active";
+  console.log(this.innerText);
   appendArray(this.innerText, this_array);
   });
   
