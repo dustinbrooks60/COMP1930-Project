@@ -9,10 +9,6 @@
 </head>
 <body>
     <script src="setup_firebase.js"></script>
-
-    <h1 id="banner">  </h1>
-    <h1 id="quote">  </h1>
-    <script src="greeting.js"></script>
     <h1 id="firebaseui-auth-container"> </h1>
 
     <script>
@@ -34,7 +30,7 @@
       },
       // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
       signInFlow: 'popup',
-      signInSuccessUrl: 'main.html',
+      signInSuccessUrl: 'logged_in.html',
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
