@@ -63,21 +63,21 @@
        var firebase = app_firebase;
        
        firebase.auth().onAuthStateChanged(function(user){
-        	console.log(set);
-          	console.log(interest);
-          	console.log(program);
+        	console.log(address);
+          	console.log(type_of_user);
+          	console.log(produce);
           	console.log(user.uid);
           	
           	//Update database with the profile info collected for the user
           	var promise = firebase.database().ref('users/'+user.uid).update( {
-           	 "set": set,
-           	 "interest": interest,
-           	 "program": program
+           	 "Address": address,
+           	 "UserType": type_of_user,
+           	 "ProduceType": produce
          	 });
           
          	//When the database update is done, then go to logged_in.html
        	 	promise.then(function() {
-       			window.location.href="logged_in.html";
+       			window.location.href="index.html";
        		});
        });
    };
