@@ -89,67 +89,8 @@
         </div>
         <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
         <script src ="seek_user.js"> </script>
+        <script src = "jsfile.js">  </script>
 
-
-        <!-- <p>Choose a plan.</p>
-        <form id="seek_profile" >
-           Produce Plan: <input type="button" id="plan" value="Pick-up Once">
-           <input type="button" id="plan" value="Pick-up Weekly">
-           <input type="button" id="plan" value="Pick-up Monthly">
-           <input type="button" id="plan" value="Contribute to Garden"><br>
-           Produce Type: <input type="text" id="type" name="interest"> <br>
-           Select Quantity: <input type="text" id="quantity" name="program"> <br><br>
-           <input type="submit">
-        </form>
-     
-
-
-        <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
-
-        <script src = "jsfile.js"> 
-
-        // console.log(this_array);
-        // function submit(){
-        //   firebase.database().ref("users/" + "new_test").set({
-
-        //   });
-        //   }
-        //   submit();
-
-
-          </script>
-
-        <script src = "seek_user.js"> </script>
-
-        <script>
-           document.getElementById('seek_profile').addEventListener('submit', submitForm);
-   function submitForm(e) {
-       e.preventDefault();
-       var set = document.getElementById("set").value;
-       var interest = document.getElementById("interest").value;
-       var program = document.getElementById("program").value;
-       //console.log(set);
-       //console.log(interest);
-       //console.log(program);
-       var firebase = app_firebase;
-
-       firebase.auth().onAuthStateChanged(function(user){
-        	console.log(set);
-          	console.log(interest);
-          	console.log(program);
-          	console.log(user.uid);
-
-          	//Update database with the profile info collected for the user
-          	var promise = firebase.database().ref('users/'+user.uid).update( {
-           	 "set": set,
-           	 "interest": interest,
-           	 "program": program
-         	 });
-
-         	//When the databate update is done, then go to main.html
-       	 	promise.then(function() {
-       			window.location.href="main.html";
-        </script> -->
 
       </body>
 </html>
