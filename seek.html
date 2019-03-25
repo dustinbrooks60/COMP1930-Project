@@ -7,19 +7,10 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 
 
-<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCRNyjKsPc9-5T0D3NHXiqDnqU8x93XwSk",
-    authDomain: "sharegarden-d68ce.firebaseapp.com",
-    databaseURL: "https://sharegarden-d68ce.firebaseio.com",
-    projectId: "sharegarden-d68ce",
-    storageBucket: "sharegarden-d68ce.appspot.com",
-    messagingSenderId: "337652476919"
-  };
-  firebase.initializeApp(config);
-</script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>    
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
 </head>
 <style>
       #header{
@@ -40,6 +31,7 @@
 
 </style>
     <body id="wrapper">
+        <script src="setup_firebase.js"></script>
         <header>
             <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
         </header>
@@ -95,6 +87,22 @@
           <p id ='txt9'><button class = "selection btn3"> Feed for 4-5 </button> </p>
 
         </div>
+        <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
+        <script src ="seek_user.js"> </script>
+
+
+        <!-- <p>Choose a plan.</p>
+        <form id="seek_profile" >
+           Produce Plan: <input type="button" id="plan" value="Pick-up Once">
+           <input type="button" id="plan" value="Pick-up Weekly">
+           <input type="button" id="plan" value="Pick-up Monthly">
+           <input type="button" id="plan" value="Contribute to Garden"><br>
+           Produce Type: <input type="text" id="type" name="interest"> <br>
+           Select Quantity: <input type="text" id="quantity" name="program"> <br><br>
+           <input type="submit">
+        </form>
+     
+
 
         <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
 
@@ -103,9 +111,7 @@
         // console.log(this_array);
         // function submit(){
         //   firebase.database().ref("users/" + "new_test").set({
-        //     "ProducePlan": this_array[0],
-        //     "ProduceType": this_array[1],
-        //     "Quanitity": this_array[2]
+
         //   });
         //   }
         //   submit();
@@ -113,57 +119,37 @@
 
           </script>
 
+        <script src = "seek_user.js"> </script>
+
         <script>
-          // Add active class to the current button (highlight it)
-var group1 = document.getElementById("grpDIV1");
-var btns = group1.getElementsByClassName("btn");
-var this_array = []
+           document.getElementById('seek_profile').addEventListener('submit', submitForm);
+   function submitForm(e) {
+       e.preventDefault();
+       var set = document.getElementById("set").value;
+       var interest = document.getElementById("interest").value;
+       var program = document.getElementById("program").value;
+       //console.log(set);
+       //console.log(interest);
+       //console.log(program);
+       var firebase = app_firebase;
 
-function appendArray(string_text, user_array){ // make sure append max is length 3
-  if (user_array.length < 3){
-    user_array.push(string_text);
-  }
-  console.log(user_array);
-  }
+       firebase.auth().onAuthStateChanged(function(user){
+        	console.log(set);
+          	console.log(interest);
+          	console.log(program);
+          	console.log(user.uid);
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  console.log(this.innerText);
-  appendArray(this.innerText, this_array);
-  });
-}
+          	//Update database with the profile info collected for the user
+          	var promise = firebase.database().ref('users/'+user.uid).update( {
+           	 "set": set,
+           	 "interest": interest,
+           	 "program": program
+         	 });
 
-var group2 = document.getElementById("grpDIV2");
-var btns2 = group2.getElementsByClassName("btn2");
-
-for (let j = 0; j < btns2.length; j++) {
-  btns2[j].addEventListener("click", function() {
-  let current = document.getElementsByClassName("active");
-  current[1].className = current[1].className.replace(" active", "");
-  this.className += " active";
-  console.log(this.innerText);
-  appendArray(this.innerText, this_array);
-  });
-}
-
-
-var group3 = document.getElementById("grpDIV3");
-var btns3 = group3.getElementsByClassName("btn3");
-
-for (let i = 0; i < btns3.length; i++) {
-  btns3[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("active");
-  current[2].className = current[2].className.replace(" active", "");
-  this.className += " active";
-  console.log(this.innerText);
-  appendArray(this.innerText, this_array);
-  });
-  
-}
-        </script>
+         	//When the databate update is done, then go to main.html
+       	 	promise.then(function() {
+       			window.location.href="main.html";
+        </script> -->
 
       </body>
 </html>
