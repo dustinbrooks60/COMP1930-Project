@@ -92,8 +92,8 @@ function initMap() {
   var vancouver = {lat: 49.246292, lng: -123.116226};
   // The map, centered at Vancouver
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: vancouver});
-  // The marker, positioned at Uluru
+      document.getElementById('map'), {zoom: 12, center: vancouver});
+  // The marker, positioned at Vancouver
   var marker = new google.maps.Marker({position: vancouver, map: map});
 }
     </script>
@@ -104,7 +104,7 @@ function initMap() {
     -->
     <!-- Currently throws an error because our website is local only right now -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?lib=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&callback=initMap">
     </script>
 
 
