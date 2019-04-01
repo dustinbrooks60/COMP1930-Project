@@ -132,7 +132,8 @@
 <p>Enter additional profile information.</p>
 <form id="profile">
     Address: <input type="text" id="address" name="address"><br>
-    Type of User: <input type="text" id="type_of_user" name="type_of_user"> <br>
+    Type of User: <input type="checkbox" id="seeker" name="seeker" value="seeker"> Seeker
+                <input type="checkbox" id="host" name="host" value="host"> Host<br>
     Date: <input type="date" id="date" name="date"> <br><br>
     <input type="submit">
 </form>
@@ -142,7 +143,7 @@
     function submitForm(e) {
         e.preventDefault();
         var address = document.getElementById("address").value;
-        var type_of_user = document.getElementById("type_of_user").value;
+        var type_of_user = document.getElementById('host').value;
         var date = document.getElementById("date").value;
         //console.log(set);
         //console.log(interest);
