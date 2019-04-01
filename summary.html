@@ -45,7 +45,7 @@
 
 <h2 id="welcome"></h2>
 
-<h2>HTML Table</h2>
+<h2>Your Summary</h2>
 
 <table>
     <tr>
@@ -57,24 +57,14 @@
         <th>Donation Type</th>
     </tr>
     <tr>
-        <td id="usertype">replace</td>
+        <td id="usertype">usertype replace</td>
+        <td id="producetype">produce replace</td>
+        <td id="quantity">quantity replace</td>
+        <td id="contact">contact replace</td>
+        <td id="host">host replace</td>
+        <td id="donation">donation replace</td>
     </tr>
-    <tr>
-        <td id="producetype">replace</td>
-    </tr>
-    <tr>
-        <td id="quantity"></td>
-    </tr>
-    <tr>
-        <td id="contact">replace</td>
-    </tr>
-    <tr>
-        <td id="host"></td>
-    </tr>
-    <tr>
-        <td id="donation"></td>
-    </tr>
-</table>
+
 <script src = "setup_firebase.js"></script>
 
     <h1 id ="code">Click here to get user information</h1>
@@ -85,9 +75,9 @@
         
         function GetUser(username){
             console.log(username);
-        var dbRef = firebase.database().ref("users/"+username+"/")
+        var dbRef = firebase.database().ref("users/"+username+"/");
         dbRef.once('value', function(snap){
-            console.log(snap.val())
+            console.log(snap.val());
             list = snap.val();
             DisplayList(list);
         });
@@ -105,14 +95,15 @@
             user_type_out.innerHTML = list['usertype'];
             host_out.innerHTML = list['host'];
             donation_out.innerHTML = list['donation'];
+            quantity_out.innerHTML = list['quantity'];
             console.log(list);
             for (x in list){
                 console.log(list[x]);
-            
-            var para = document.createElement("p");
-            document.body.appendChild(para);
-            var node = document.createTextNode("Key is "+x+ " Value is "+ list[x])
-            para.appendChild(node);
+
+            // var para = document.createElement("p");
+            // document.body.appendChild(para);
+            // var node = document.createTextNode("Key is "+x+ " Value is "+ list[x]);
+            // para.appendChild(node);
             }
         }
     </script>
