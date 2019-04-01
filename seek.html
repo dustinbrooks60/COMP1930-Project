@@ -71,80 +71,140 @@
     </ul>
 </nav>
 
-<h1 id="header"> Choose a plan </h1>
-<h2> Produce Plan </h2>
-<div class="btn-group" id="grpDIV1">
+<h1 id="header"> Choose your plan </h1>
+<!--<h2> Produce Plan </h2>-->
+<!--<div class="btn-group" id="grpDIV1">-->
 
 
-    <p id='txt0'>
-        <button class="selection active btn">Pick-up Once</button>
-    </p>
-    <p id='txt1'>
-        <button class="selection btn"> Pick-up Weekly</button>
-    </p>
-    <p id='txt2'>
-        <button class="selection btn"> Pick-up Monthly</button>
-    </p>
-    <p id='txt3'>
-        <button class="selection btn"> Contribute to Garden</button>
-    </p>
+    <!--<p id='txt0'>-->
+        <!--<button class="selection active btn">Pick-up Once</button>-->
+    <!--</p>-->
+    <!--<p id='txt1'>-->
+        <!--<button class="selection btn"> Pick-up Weekly</button>-->
+    <!--</p>-->
+    <!--<p id='txt2'>-->
+        <!--<button class="selection btn"> Pick-up Monthly</button>-->
+    <!--</p>-->
+    <!--<p id='txt3'>-->
+        <!--<button class="selection btn"> Contribute to Garden</button>-->
+    <!--</p>-->
 
 
-</div>
-<h2> Produce Type </h2>
+<!--</div>-->
+<!--<h2> Produce Type </h2>-->
 
-<div class="btn-group" id="grpDIV2">
+<!--<div class="btn-group" id="grpDIV2">-->
 
-    <p id='txt4'>
-        <button class="selection btn2 active"> Fruits</button>
-    </p>
-    <p id='txt5'>
-        <button class="selection btn2"> Vegetables</button>
-    </p>
-    <p id='txt6'>
-        <button class="selection btn2"> Fruits & Vegetables</button>
-    </p>
+    <!--<p id='txt4'>-->
+        <!--<button class="selection btn2 active"> Fruits</button>-->
+    <!--</p>-->
+    <!--<p id='txt5'>-->
+        <!--<button class="selection btn2"> Vegetables</button>-->
+    <!--</p>-->
+    <!--<p id='txt6'>-->
+        <!--<button class="selection btn2"> Fruits & Vegetables</button>-->
+    <!--</p>-->
 
-</div>
-<h2> Select Quantity </h2>
-<div class="btn-group" id="grpDIV3">
+<!--</div>-->
+<!--<h2> Select Quantity </h2>-->
+<!--<div class="btn-group" id="grpDIV3">-->
 
-    <p id='txt7'>
-        <button class="selection btn3 active"> Feed for 1</button>
-    </p>
-    <p id='txt8'>
-        <button class="selection btn3"> Feed for 2-3</button>
-    </p>
-    <p id='txt9'>
-        <button class="selection btn3"> Feed for 4-5</button>
-    </p>
+    <!--<p id='txt7'>-->
+        <!--<button class="selection btn3 active"> Feed for 1</button>-->
+    <!--</p>-->
+    <!--<p id='txt8'>-->
+        <!--<button class="selection btn3"> Feed for 2-3</button>-->
+    <!--</p>-->
+    <!--<p id='txt9'>-->
+        <!--<button class="selection btn3"> Feed for 4-5</button>-->
+    <!--</p>-->
 
-</div>
+<!--</div>-->
 
 <form id="seekprofile">
-    <div>Produce Plan: <input type="button" id="plan" name="plan"></div> <br>
-    <div>Produce Type: <input type="text" id="type_of_user" name="type_of_user"></div> <br>
-    <div>Select Quantity: <input type="text" id="quantity" name="quantity"></div> <br><br>
+    <div>Produce Plan:
+        <div>
+        <input type="radio" class="plan" name="plan" value="pick-up-once">
+        <label>Pick-up Once</label>
+        </div>
+        <div>
+            <input type="radio" class="plan" name="plan" value="Pick-up-weekly">
+            <label>Pick-up Weekly</label>
+        </div>
+        <div>
+            <input type="radio" class="plan" name="plan" value="Pick-up-monthly">
+            <label>Pick-up Monthly</label>
+        </div>
+        <div>
+            <input type="radio" class="plan" name="plan" value="Contribute">
+            <label>Contribute to Garden</label>
+        </div>
+
+    </div> <br>
+    <div>Produce Type:
+        <div>
+            <input type="radio" class="type" name="type" value="Vegetables">
+            <label>Vegetables</label>
+        </div>
+        <div>
+            <input type="radio" id="type" name="type" value="Fruits">
+            <label>Fruits</label>
+        </div>
+        <div>
+            <input type="radio" class="type" name="type" value="Fruits&Veggies">
+            <label>Fruits and Vegetables</label>
+        </div>
+
+    </div> <br>
+    Select Quantity:
+    <div>
+        <input type="radio" class="feed" name="quantity" value="Feed for 1">
+        <label>Feed for 1</label>
+    </div>
+    <div>
+        <input type="radio" class="feed" name="quantity" value="Feed for 2-3">
+        <label>Feed for 2 or 3</label>
+    </div>
+    <div>
+        <input type="radio" class="feed" name="quantity" value="Feed for 3-5">
+        <label>Feed for 3 to 5</label>
+    </div>
+    </div> <br><br>
     <input type="submit">
 </form>
 <script>
+    function getValue(class_elements){
+        for(let i = 0; i < class_elements.length; i++) {
+            if (class_elements[i].checked){
+                return class_elements[i].value
+            }
+        }
+    }
     document.getElementById('seekprofile').addEventListener('submit', submitForm);
     var firebase = app_firebase;
     function submitForm(e) {
         e.preventDefault();
-        var quantity = document.getElementById("quantity").value;
-        var type_of_user = document.getElementById("type_of_user").value;
-        var produce = document.getElementById("produce").value;
+        // var quantity = document.getElementsByClassName("feed").value;
+        // var type_of_user = document.getElementById("type_of_user").value;
+        // var produce = document.getElementById("produce").value;
+        let plans = document.getElementsByClassName('plan');
+        let producetypes =document.getElementsByClassName('type');
+        let quantity = document.getElementsByClassName('feed');
+        var plan = getValue(plans);
+        var type = getValue(producetypes);
+        var user_quantity = getValue(quantity);
+        var host = ['Raymond', 'Alex', 'Roland'];
         //console.log(set);
         //console.log(interest);
         //console.log(program);
 
         firebase.auth().onAuthStateChanged(function (user) {
-            localStorage.setItem('userid', String(user.uid) )//Update database with the profile info collected for the user
-            var promise = firebase.database().ref('users/' + user.uid).update({
-                "quantity": quantity,
-                "usertype": type_of_user,
-                "producetype": produce
+            var userid = localStorage.getItem('userid'); //Update database with the profile info collected for the user
+            var promise = firebase.database().ref('users/' + userid+'/').update({
+                "quantity": user_quantity,
+                "producetype": type,
+                "produceplan": plan,
+                "host": host[Math.floor(Math.random()*host.length)]
             });
 
             //When the database update is done, then go to logged_in.html

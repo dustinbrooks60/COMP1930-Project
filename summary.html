@@ -87,7 +87,7 @@
     <h1 id ="code">Click here to get user information</h1>
     <script>
         document.getElementById("code").addEventListener("click", function(){
-            GetUser("fgy5KssMNcVuqldo4P126EDEDdb2")
+            GetUser(localStorage.getItem('userid'))
         });
         
         function GetUser(username){
@@ -108,11 +108,12 @@
             var host_out = document.getElementById("host");
             var donation_out = document.getElementById("donation");
             contact_out.innerHTML = list['email'];
-            produce_out.innerHTML = list['produce'];
-            user_type_out.innerHTML = list['usertype'];
+            produce_out.innerHTML = list['producetype'];
+            user_type_out.innerHTML = list['produceplan'];
             host_out.innerHTML = list['host'];
             donation_out.innerHTML = list['donation'];
             quantity_out.innerHTML = list['quantity'];
+            host_out.innerHTML
             console.log(list);
             for (x in list){
                 console.log(list[x]);
