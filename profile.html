@@ -15,7 +15,7 @@
         /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
         #map {
-            height: 425px;
+            height: 350px;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -96,6 +96,10 @@
         #target {
             width: 345px;
         }
+        
+        form {
+            margin-left: 2%;
+        }
 
 
     </style>
@@ -172,7 +176,7 @@
 
             //When the database update is done, then go to logged_in.html
             promise.then(function () {
-                window.location.href = "index.html";
+                window.location.href = "logged_in.html";
             });
         });
     };
