@@ -9,25 +9,39 @@
     </style>
 </head>
 <style>
-    #header {
-        text-align: center;
-        font-size: 32px;
-        top: 50%;
-    }
+        #header{
+            text-align: center;
+            font-size: 32px;
+            top:50%;
+        }
 
-    .selection {
-        width: 200px;
-        height: 50px;
-        margin-left: 3%;
-        margin-top: 50px;
-    }
+        #amount{
+            margin-left: 8%;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
 
-    .selection1 {
-        width: 100px;
-        height: 50px;
-        margin-left: 3%;
-    }
-</style>
+        .section3{
+            width: 200px;
+            height: 50px;
+            margin-left: 7%;
+            margin-top: 10px;
+    
+        }
+        .section2{
+            width: 150px;
+            height: 50px;
+            margin-left: 7%;
+            margin-top: 30px;
+        }
+        .section{
+            width: 200px;
+            height: 50px;
+            margin-left: 23%;
+            margin-top: 30px;
+        }
+
+    </style>
 
 <body>
 <header>
@@ -64,101 +78,64 @@
 
 <h1 id='header'>Donations are appreciated!</h1>
 
-<div class="btn-group" id="div1">
+<div class="btn-group" id= "div1">
+          
+         
+    <p id ='p1'><button class = "section active btn"> Monthly donation </button></p>
+    <p id ='p2'><button class = "section btn"> One-time donation </button></p>
+ 
+  </div>
+  <div class="btn-group" id= "div2">
+
+    <p id ='p3'><button class = "section2 btn2 active"> $10 </button></p>
+    <p id ='p4'><button class = "section2 btn2"> $25 </button></p>
+    <p id ='p5'><button class = "section2 btn2"> $50 </button></p>
+    <p id ='p6'><button class = "section2 btn2"> $75 </button></p>
+    <p id ='p7'><button class = "section2 btn2"> $100 </button></p>
+
+  </div><br>
+    
+  <div>
+    <form id="amount" >
+        Other amount (minimum $1): <input type="text" id="other" name="other">
+     </form>
+ 
+  </div>
+
+    <main>
+        <h2>Select Donation Choice</h2>
+
+                <ul style="list-style: none">
+                    <li><input type="button" name="options" id="city_farmer" value="City Farmer"> City Farmer: <a href="http://www.cityfarmer.info/" target="_blank">Link</a> </li>
+
+     
+                    <li><input type="radio" name="options" id="grasslands" value="Grasslands Conservation Council of British Columbia"> Grasslands Conservation Council of British Columbia: <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a> </li>
+        
+                    <li><input type="radio" name="options" id="burke" value="Burke Mountain Naturalists"> Burke Mountain Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a> </li>
+
+                <li>
+                    <input type="radio" name="options" id="fun" value="Friends Uniting for Nature"> Friends Uniting for Nature (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a> </li>
+        
+        
+                <li>
+                    <input type="radio" name="options" id="charitree" value="ChariTREE Foundation"> ChariTREE Foundation: <a href="http://www.charitree-foundation.org/" target="_blank">Link</a> </li>
+
+                <li>
+                    <input type="radio" name="options" id="forest_ethics" value="ForestEthics Solutions Society"> ForestEthics Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a>  </li>
+        </ul>
+        
+        <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of the options found here and provide a proof of receipt.</a>
 
 
-    <p id='p1'>
-        <button class="selection active btn"> Monthly donation</button>
-    </p>
-    <p id='p2'>
-        <button class="selection btn"> One-time donation</button>
-    </p>
+            <div style="padding-top: 2%">
+                <input type="submit" value="Submit">
+                <input type="reset">
+        </div>
 
-</div>
-<div class="btn-group" id="div1">
-
-    <p id='p3'>
-        <button class="selection1 btn2 active"> $10</button>
-    </p>
-    <p id='p4'>
-        <button class="selection1 btn2"> $25</button>
-    </p>
-    <p id='p5'>
-        <button class="selection1 btn2"> $50</button>
-    </p>
-    <p id='p6'>
-        <button class="selection1 btn2"> $75</button>
-    </p>
-    <p id='p7'>
-        <button class="selection1 btn2"> $100</button>
-    </p>
-    <br>
-
-    <form id="inputAmount">
-        Other amount (Minimum $1): <input type="text" id="other" name="other">
-    </form>
-
-</div>
-
-<h2>Or choose one of the following</h2>
-<div class="btn-group" id="div1">
-
-    <p id='p8'>
-        <button class="selection btn3 active"> Canned goods</button>
-    </p>
-    <p id='p9'>
-        <button class="selection btn3"> Clothing</button>
-    </p>
-    <p id='p10'>
-        <button class="selection btn3"> Books</button>
-    </p>
-    <p id='p11'>
-        <button class="selection btn3"> Supplies</button>
-    </p>
-
-</div>
-<main>
-    <h2>Select Donation Choice</h2>
-
-    <ul style="list-style: none">
-        <li><input type="radio" name="options" id="city_farmer" value="City Farmer"> City Farmer: <a
-                href="http://www.cityfarmer.info/" target="_blank">Link</a></li>
-
-
-        <li><input type="radio" name="options" id="grasslands"
-                   value="Grasslands Conservation Council of British Columbia"> Grasslands Conservation Council of
-            British Columbia: <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a>
-        </li>
-
-        <li><input type="radio" name="options" id="burke" value="Burke Mountain Naturalists"> Burke Mountain
-            Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a></li>
-
-        <li>
-            <input type="radio" name="options" id="fun" value="Friends Uniting for Nature"> Friends Uniting for Nature
-            (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a></li>
-
-
-        <li>
-            <input type="radio" name="options" id="charitree" value="ChariTREE Foundation"> ChariTREE Foundation: <a
-                href="http://www.charitree-foundation.org/" target="_blank">Link</a></li>
-
-        <li>
-            <input type="radio" name="options" id="forest_ethics" value="ForestEthics Solutions Society"> ForestEthics
-            Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a></li>
-    </ul>
-
-    <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of
-        the options found here and provide a proof of receipt.</a>
-
-
-    <div style="padding-top: 2%">
-        <input type="submit" value="Submit">
-        <input type="reset">
-    </div>
-
-
-</main>
-<script src="jsfile.js"></script>
+        
+    </main>
+    <script src = "jsfile.js"> </script>
+    <script src = "user_donation.js"></script>
 </body>
 
 </html>
