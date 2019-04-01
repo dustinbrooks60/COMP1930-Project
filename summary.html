@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 75%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summary Page</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+</head>
+<body id="wrapper">
+<header>
+    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">
+            <button class="nav_button"> Home Page</button>
+        </a></li>
+        <li><a href="login.html">
+            <button class="nav_button"> Login</button>
+        </a></li>
+        <li class="collapse">
+            <button class="nav_button"> Concept</button>
+        </li>
+        <div class="content">
+            <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your
+                garden space means that you have a surplus of produce that you are willing to part with. Communal
+                contributions help those who need it the most. ShareGarden is a non-profit organization; however,
+                donations and contributions are required for those seeking a garden.</p>
+        </div>
+        <li class="collapse ">
+            <button class="nav_button"> About Us</button>
+        </li>
+        <div class="content">
+            <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
+        </div>
+    </ul>
+</nav>
+
+<h2 id="welcome"></h2>
+
+<h2>Your Summary</h2>
+
+<table>
+    <tr>
+        <th>User Type</th>
+        <th>Produce Type</th>
+        <th>Quantity Selected</th>
+        <th>Contact Information</th>
+        <th>Host</th>
+        <th>Donation Type</th>
+    </tr>
+    <tr>
+        <td id="usertype">usertype replace</td>
+        <td id="producetype">produce replace</td>
+        <td id="quantity">quantity replace</td>
+        <td id="contact">contact replace</td>
+        <td id="host">host replace</td>
+        <td id="donation">donation replace</td>
+    </tr>
+</table>
+<script src = "setup_firebase.js"></script>
+
+    <h1 id ="code">Click here to get user information</h1>
+    <script>
+        document.getElementById("code").addEventListener("click", function(){
+            GetUser("fgy5KssMNcVuqldo4P126EDEDdb2")
+        });
+        
+        function GetUser(username){
+            console.log(username);
+        var dbRef = firebase.database().ref("users/"+username+"/");
+        dbRef.once('value', function(snap){
+            console.log(snap.val());
+            list = snap.val();
+            DisplayList(list);
+        });
+    }
+
+        function DisplayList(list){
+            var user_type_out = document.getElementById("usertype");
+            var produce_out = document.getElementById("producetype");
+            var quantity_out = document.getElementById("quantity");
+            var contact_out = document.getElementById("contact");
+            var host_out = document.getElementById("host");
+            var donation_out = document.getElementById("donation");
+            contact_out.innerHTML = list['email'];
+            produce_out.innerHTML = list['produce'];
+            user_type_out.innerHTML = list['usertype'];
+            host_out.innerHTML = list['host'];
+            donation_out.innerHTML = list['donation'];
+            quantity_out.innerHTML = list['quantity'];
+            console.log(list);
+            for (x in list){
+                console.log(list[x]);
+
+            // var para = document.createElement("p");
+            // document.body.appendChild(para);
+            // var node = document.createTextNode("Key is "+x+ " Value is "+ list[x]);
+            // para.appendChild(node);
+            }
+        }
+    </script>
+
+    <script>
+        var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getItem('userid')+"/"
+            +"name");
+        dbRef.on("value",
+            function(snapshot){
+                out.innerHTML = "Welcome "+ snapshot.val();
+            })
+
+    </script>
+    <script src = jsfile.js> </script>
+
+</body>
+</html>

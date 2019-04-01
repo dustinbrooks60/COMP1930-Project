@@ -1,264 +1,247 @@
 <!DOCTYPE html>
-<html>   
+<html>
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="app.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="app.css"/>
     <title> Profile Form</title>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    
-
-<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 425px;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
-
-      #infowindow-content .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
-      }
-
-      .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: Roboto;
-      }
-
-      #pac-container {
-        padding-bottom: 12px;
-        margin-right: 12px;
-      }
-
-      .pac-controls {
-        display: inline-block;
-        padding: 5px 11px;
-      }
-
-      .pac-controls label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-
-      #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
-
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
-
-      #title {
-        color: #fff;
-        background-color: #4d90fe;
-        font-size: 25px;
-        font-weight: 500;
-        padding: 6px 12px;
-      }
-      #target {
-        width: 345px;
-      }
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
 
 
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 350px;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #description {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        #infowindow-content .title {
+            font-weight: bold;
+        }
+        #infowindow-content {
+            display: none;
+        }
+        #map #infowindow-content {
+            display: inline;
+        }
+        .pac-card {
+            margin: 10px 10px 0 0;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            font-family: Roboto;
+        }
+        #pac-container {
+            padding-bottom: 12px;
+            margin-right: 12px;
+        }
+        .pac-controls {
+            display: inline-block;
+            padding: 5px 11px;
+        }
+        .pac-controls label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+        #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+        }
+        #pac-input:focus {
+            border-color: #4d90fe;
+        }
+        #title {
+            color: #fff;
+            background-color: #4d90fe;
+            font-size: 25px;
+            font-weight: 500;
+            padding: 6px 12px;
+        }
+        #target {
+            width: 345px;
+        }
+        
+        form {
+            margin-left: 2%;
+        }
+
+        form {
+            margin-left: 2%;
+        }
     </style>
 
 
 </head>
-    
+
 <body id="wrapper">
-    <header>
-        <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
-    </header>
+<header>
+    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+</header>
 
 <nav>
     <ul>
-        <li><a href="index.html"><button class="nav_button"> Home Page </button></a></li>
-        <li><a href="login.html"><button class="nav_button"> Login </button></a></li>
-        <li class = "collapse"><button class="nav_button"> Concept </button></li>
+        <li><a href="index.html">
+            <button class="nav_button"> Home Page</button>
+        </a></li>
+        <li><a href="login.html">
+            <button class="nav_button"> Login</button>
+        </a></li>
+        <li class="collapse">
+            <button class="nav_button"> Concept</button>
+        </li>
         <div class="content">
-          <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-             Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your garden space means that you have a surplus of produce that you are willing to part with. Communal contributions help those who need it the most. ShareGarden is a non-profit organization; however, donations and contributions are required for those seeking a garden.</p>
+            <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your
+                garden space means that you have a surplus of produce that you are willing to part with. Communal
+                contributions help those who need it the most. ShareGarden is a non-profit organization; however,
+                donations and contributions are required for those seeking a garden.</p>
         </div>
-        <li class = "collapse "><button class="nav_button">  About Us</button></li>
+        <li class="collapse ">
+            <button class="nav_button"> About Us</button>
+        </li>
         <div class="content">
-          <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
+            <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
     </ul>
 </nav>
 
-   <script src="setup_firebase.js"></script>
-   <p>Enter additional profile information.</p>
-   <form id="profile" >
-      Address: <input type="text" id="address" name="address"><br>
-      Type of User: <input type="text" id="type_of_user" name="type_of_user"> <br>
-      Type of Produce: <input type="text" id="produce" name="produce"> <br><br>
-      <input type="submit">
-   </form>
+<script src="setup_firebase.js"></script>
+<p>Enter additional profile information.</p>
+<form id="profile">
+    Address: <input type="text" id="address" name="address"><br>
+    Type of User: <input type="text" id="type_of_user" name="type_of_user"> <br>
+    Date: <input type="date" id="date" name="date"> <br><br>
+    <input type="submit">
+</form>
 
-   <script>
-   document.getElementById('profile').addEventListener('submit', submitForm);
-   function submitForm(e) {
-       e.preventDefault();
-       var address = document.getElementById("address").value;
-       var type_of_user = document.getElementById("type_of_user").value;
-       var produce = document.getElementById("produce").value;
-       //console.log(set);
-       //console.log(interest);
-       //console.log(program);
-       var firebase = app_firebase;
-       
-       firebase.auth().onAuthStateChanged(function(user){
-        	console.log(address);
-          	console.log(type_of_user);
-          	console.log(produce);
-          	console.log(user.uid);
-          	
-          	//Update database with the profile info collected for the user
-          	var promise = firebase.database().ref('users/'+user.uid).update( {
-           	 "Address": address,
-           	 "UserType": type_of_user,
-           	 "ProduceType": produce
-         	 });
-          
-         	//When the database update is done, then go to logged_in.html
-       	 	promise.then(function() {
-       			window.location.href="index.html";
-       		});
-       });
-   };
-   </script>
-    
-    
+<script>
+    document.getElementById('profile').addEventListener('submit', submitForm);
+    function submitForm(e) {
+        e.preventDefault();
+        var address = document.getElementById("address").value;
+        var type_of_user = document.getElementById("type_of_user").value;
+        var date = document.getElementById("date").value;
+        //console.log(set);
+        //console.log(interest);
+        //console.log(program);
+        var firebase = app_firebase;
+        firebase.auth().onAuthStateChanged(function (user) {
 
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="map"></div>
-    <script>
-      // This example adds a search box to a map, using the Google Place Autocomplete
-      // feature. People can enter geographical searches. The search box will return a
-      // pick list containing a mix of places and predicted search terms.
+            //Update database with the profile info collected for the user
+            var promise = firebase.database().ref('users/' + user.uid).update({
+                "Address": address,
+                "usertype": type_of_user,
+                "date": date
+            });
+            //When the database update is done, then go to logged_in.html
+            promise.then(function () {
+                window.location.href = "logged_in.html";
+            });
+        });
+    };
+</script>
 
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-      function initAutocomplete() {
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<div id="map"></div>
+<script>
+    // This example adds a search box to a map, using the Google Place Autocomplete
+    // feature. People can enter geographical searches. The search box will return a
+    // pick list containing a mix of places and predicted search terms.
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 49.246292, lng: -123.116226},
-          zoom: 13,
-          mapTypeId: 'roadmap'
+            center: {lat: 49.246292, lng: -123.116226},
+            zoom: 13,
+            mapTypeId: 'roadmap'
         });
-          
         // On user click, zoom into the map
-        marker.addListener('click', function() {
-          map.setZoom(8);
-          map.setCenter(marker.getPosition());
+        marker.addListener('click', function () {
+            map.setZoom(8);
+            map.setCenter(marker.getPosition());
         });
-
-
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
         // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
+        map.addListener('bounds_changed', function () {
+            searchBox.setBounds(map.getBounds());
         });
-
         var markers = [];
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
-        searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
-
-          if (places.length == 0) {
-            return;
-          }
-
-          // Clear out the old markers.
-          markers.forEach(function(marker) {
-            marker.setMap(null);
-          });
-          markers = [];
-
-          // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
+        searchBox.addListener('places_changed', function () {
+            var places = searchBox.getPlaces();
+            if (places.length == 0) {
+                return;
             }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
-              
-            
-
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
-
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
+            // Clear out the old markers.
+            markers.forEach(function (marker) {
+                marker.setMap(null);
+            });
+            markers = [];
+            // For each place, get the icon, name and location.
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function (place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                };
+                // Create a marker for each place.
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
+                }));
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
         });
-      }
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&libraries=places&callback=initAutocomplete"
-         async defer></script>
-
-
+    }
+</script>
+<script src="jsfile.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
 
-    
-    </body>
+</body>
 </html>
