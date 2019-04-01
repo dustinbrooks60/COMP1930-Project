@@ -3,7 +3,7 @@
   margin-right: 2%;
 }
 button:hover{
-  background-color: #grey; /* Green */
+  background-color: grey; /* Green */
   color: green;
   cursor: pointer;
 }
@@ -29,7 +29,7 @@ button:hover{
 /* Add a background color on hover */
 .btn-group button:hover {
   background-color: #3e8e41;
-}
+} 
 
 .wrapper {
     width: 80%;
