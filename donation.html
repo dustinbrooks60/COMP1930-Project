@@ -9,42 +9,54 @@
     </style>
 </head>
 <style>
-        #header{
-            text-align: center;
-            font-size: 32px;
-            top:50%;
-        }
+    #header {
+        text-align: center;
+        font-size: 32px;
+        top: 50%;
+    }
 
-        .selection{
-            width: 200px;
-            height: 50px;
-            margin-left: 3%;
-            margin-top: 50px;
-        }
-        .selection1{
-            width: 100px;
-            height: 50px;
-            margin-left: 3%;
-        }
-    </style>
+    .selection {
+        width: 200px;
+        height: 50px;
+        margin-left: 3%;
+        margin-top: 50px;
+    }
+
+    .selection1 {
+        width: 100px;
+        height: 50px;
+        margin-left: 3%;
+    }
+</style>
 
 <body>
-        <header>
-        <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
-    </header>
+<header>
+    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+</header>
 
 <nav>
     <ul>
-        <li><a href="index.html"><button class="nav_button"> Home Page </button></a></li>
-        <li><button class="nav_button"> Login </button></li>
-        <li class = "collapse"><button class="nav_button"> Concept </button></li>
+        <li><a href="index.html">
+            <button class="nav_button"> Home Page</button>
+        </a></li>
+        <li>
+            <button class="nav_button"> Login</button>
+        </li>
+        <li class="collapse">
+            <button class="nav_button"> Concept</button>
+        </li>
         <div class="content">
-          <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-             Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your garden space means that you have a surplus of produce that you are willing to part with. Communal contributions help those who need it the most. ShareGarden is a non-profit organization; however, donations and contributions are required for those seeking a garden.</p>
+            <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your
+                garden space means that you have a surplus of produce that you are willing to part with. Communal
+                contributions help those who need it the most. ShareGarden is a non-profit organization; however,
+                donations and contributions are required for those seeking a garden.</p>
         </div>
-        <li class = "collapse "><button class="nav_button">  About Us</button></li>
+        <li class="collapse ">
+            <button class="nav_button"> About Us</button>
+        </li>
         <div class="content">
-          <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
+            <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
     </ul>
 </nav>
@@ -52,69 +64,101 @@
 
 <h1 id='header'>Donations are appreciated!</h1>
 
-<div class="btn-group" id= "div1">
-          
-         
-    <p id ='p1'><button class = "selection active btn"> Monthly donation </button></p>
-    <p id ='p2'><button class = "selection btn"> One-time donation </button></p>
- 
-  </div>
-  <div class="btn-group" id= "div1">
+<div class="btn-group" id="div1">
 
-    <p id ='p3'><button class = "selection1 btn2 active"> $10 </button></p>
-    <p id ='p4'><button class = "selection1 btn2"> $25 </button></p>
-    <p id ='p5'><button class = "selection1 btn2"> $50 </button></p>
-    <p id ='p6'><button class = "selection1 btn2"> $75 </button></p>
-    <p id ='p7'><button class = "selection1 btn2"> $100 </button></p><br>
-    
-    <form id="inputAmount" >
+
+    <p id='p1'>
+        <button class="selection active btn"> Monthly donation</button>
+    </p>
+    <p id='p2'>
+        <button class="selection btn"> One-time donation</button>
+    </p>
+
+</div>
+<div class="btn-group" id="div1">
+
+    <p id='p3'>
+        <button class="selection1 btn2 active"> $10</button>
+    </p>
+    <p id='p4'>
+        <button class="selection1 btn2"> $25</button>
+    </p>
+    <p id='p5'>
+        <button class="selection1 btn2"> $50</button>
+    </p>
+    <p id='p6'>
+        <button class="selection1 btn2"> $75</button>
+    </p>
+    <p id='p7'>
+        <button class="selection1 btn2"> $100</button>
+    </p>
+    <br>
+
+    <form id="inputAmount">
         Other amount (Minimum $1): <input type="text" id="other" name="other">
-     </form>
- 
-  </div>
+    </form>
 
-  <h2>Or choose one of the following</h2>
-  <div class="btn-group" id= "div1">
+</div>
 
-    <p id ='p8'><button class = "selection btn3 active"> Canned goods </button></p>
-    <p id ='p9'><button class = "selection btn3"> Clothing </button></p>
-    <p id ='p10'><button class = "selection btn3"> Books </button></p>
-    <p id ='p11'><button class = "selection btn3"> Supplies </button></p>
+<h2>Or choose one of the following</h2>
+<div class="btn-group" id="div1">
 
-  </div>
-    <main>
-        <h2>Select Donation Choice</h2>
+    <p id='p8'>
+        <button class="selection btn3 active"> Canned goods</button>
+    </p>
+    <p id='p9'>
+        <button class="selection btn3"> Clothing</button>
+    </p>
+    <p id='p10'>
+        <button class="selection btn3"> Books</button>
+    </p>
+    <p id='p11'>
+        <button class="selection btn3"> Supplies</button>
+    </p>
 
-                <ul style="list-style: none">
-                    <li><input type="radio" name="options" id="city_farmer" value="City Farmer"> City Farmer: <a href="http://www.cityfarmer.info/" target="_blank">Link</a> </li>
+</div>
+<main>
+    <h2>Select Donation Choice</h2>
 
-     
-                    <li><input type="radio" name="options" id="grasslands" value="Grasslands Conservation Council of British Columbia"> Grasslands Conservation Council of British Columbia: <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a> </li>
-        
-                    <li><input type="radio" name="options" id="burke" value="Burke Mountain Naturalists"> Burke Mountain Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a> </li>
-
-                <li>
-                    <input type="radio" name="options" id="fun" value="Friends Uniting for Nature"> Friends Uniting for Nature (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a> </li>
-        
-        
-                <li>
-                    <input type="radio" name="options" id="charitree" value="ChariTREE Foundation"> ChariTREE Foundation: <a href="http://www.charitree-foundation.org/" target="_blank">Link</a> </li>
-
-                <li>
-                    <input type="radio" name="options" id="forest_ethics" value="ForestEthics Solutions Society"> ForestEthics Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a>  </li>
-        </ul>
-        
-        <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of the options found here and provide a proof of receipt.</a>
+    <ul style="list-style: none">
+        <li><input type="radio" name="options" id="city_farmer" value="City Farmer"> City Farmer: <a
+                href="http://www.cityfarmer.info/" target="_blank">Link</a></li>
 
 
-            <div style="padding-top: 2%">
-                <input type="submit" value="Submit">
-                <input type="reset">
-        </div>
+        <li><input type="radio" name="options" id="grasslands"
+                   value="Grasslands Conservation Council of British Columbia"> Grasslands Conservation Council of
+            British Columbia: <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a>
+        </li>
 
-        
-    </main>
-    <script src = "jsfile.js"> </script>
+        <li><input type="radio" name="options" id="burke" value="Burke Mountain Naturalists"> Burke Mountain
+            Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a></li>
+
+        <li>
+            <input type="radio" name="options" id="fun" value="Friends Uniting for Nature"> Friends Uniting for Nature
+            (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a></li>
+
+
+        <li>
+            <input type="radio" name="options" id="charitree" value="ChariTREE Foundation"> ChariTREE Foundation: <a
+                href="http://www.charitree-foundation.org/" target="_blank">Link</a></li>
+
+        <li>
+            <input type="radio" name="options" id="forest_ethics" value="ForestEthics Solutions Society"> ForestEthics
+            Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a></li>
+    </ul>
+
+    <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of
+        the options found here and provide a proof of receipt.</a>
+
+
+    <div style="padding-top: 2%">
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </div>
+
+
+</main>
+<script src="jsfile.js"></script>
 </body>
 
 </html>

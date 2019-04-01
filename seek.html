@@ -7,90 +7,123 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
 
 </head>
 <style>
-      #header{
+    #header {
         text-align: center;
         font-size: 32px;
-        top:50%;
-      }
-      h2{
+        top: 50%;
+    }
+
+    h2 {
         margin: 75px;
         margin-top: 100px;
         margin-left: 0;
-      }
-      .selection{
+    }
+
+    .selection {
         width: 250px;
         height: 50px;
         margin-left: 3%;
-      }
+    }
 
 </style>
-    <body id="wrapper">
-        <script src="setup_firebase.js"></script>
-        <header>
-            <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
-        </header>
+<body id="wrapper">
+<script src="setup_firebase.js"></script>
+<header>
+    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+</header>
 
-        <nav>
-            <ul>
+<nav>
+    <ul>
 
-                <li><a href="index.html"><button class="nav_button"> Home Page </button></a></li>
+        <li><a href="index.html">
+            <button class="nav_button"> Home Page</button>
+        </a></li>
 
-                <li><a href = "login.html"><button class="nav_button"> Login </button> </a></li>
+        <li><a href="login.html">
+            <button class="nav_button"> Login</button>
+        </a></li>
 
-                <li class = "collapse"><button class="nav_button"> Concept </button></li>
-                <div class="content">
-                  <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-                     User's can choose to share their garden spaces (if they have a surplus of produce) or they can look for gardens to pick up produce from. Communal contributions help those who need it the most. Share Garden is a non-profit organization; however, donations and contributions are required for those seeking a garden.</p>
-
-                </div>
-
-                <li class = "collapse "><button class="nav_button">  About Us</button></li>
-                <div class="content">
-                  <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
-                </div>
-
-            </ul>
-        </nav>
-
-        <h1 id = "header"> Choose a plan </h1>
-        <h2> Produce Plan </h2>
-          <div class="btn-group" id = "grpDIV1">
-          
-         
-          <p id ='txt0'><button class = "selection active btn">Pick-up Once </button> </p>
-          <p id ='txt1'><button class = "selection btn"> Pick-up Weekly </button> </p>
-          <p id ='txt2'><button class = "selection btn"> Pick-up Monthly </button> </p>
-          <p id ='txt3'><button class = "selection btn"> Contribute to Garden </button> </p>
-
-        
-        </div>
-        <h2> Produce Type </h2>
-
-        <div class="btn-group" id = "grpDIV2">
-            
-          <p id ='txt4'><button class = "selection btn2 active"> Fruits </button> </p>
-          <p id ='txt5'><button class = "selection btn2"> Vegetables </button> </p>
-          <p id ='txt6'><button class = "selection btn2"> Fruits & Vegetables </button> </p>
-            
-        </div>
-        <h2> Select Quantity </h2>
-        <div class="btn-group" id = "grpDIV3">
-          
-          <p id ='txt7'><button class = "selection btn3 active"> Feed for 1 </button> </p>
-          <p id ='txt8'><button class = "selection btn3"> Feed for 2-3 </button> </p>
-          <p id ='txt9'><button class = "selection btn3"> Feed for 4-5 </button> </p>
+        <li class="collapse">
+            <button class="nav_button"> Concept</button>
+        </li>
+        <div class="content">
+            <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
+                User's can choose to share their garden spaces (if they have a surplus of produce) or they can look for
+                gardens to pick up produce from. Communal contributions help those who need it the most. Share Garden is
+                a non-profit organization; however, donations and contributions are required for those seeking a
+                garden.</p>
 
         </div>
-        <button id ="bottomright" style="height:32px;width:128px;"> Submit </button>
-        <script src ="seek_user.js"> </script>
-        <script src = "jsfile.js">  </script>
+
+        <li class="collapse ">
+            <button class="nav_button"> About Us</button>
+        </li>
+        <div class="content">
+            <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
+        </div>
+
+    </ul>
+</nav>
+
+<h1 id="header"> Choose a plan </h1>
+<h2> Produce Plan </h2>
+<div class="btn-group" id="grpDIV1">
 
 
-      </body>
+    <p id='txt0'>
+        <button class="selection active btn">Pick-up Once</button>
+    </p>
+    <p id='txt1'>
+        <button class="selection btn"> Pick-up Weekly</button>
+    </p>
+    <p id='txt2'>
+        <button class="selection btn"> Pick-up Monthly</button>
+    </p>
+    <p id='txt3'>
+        <button class="selection btn"> Contribute to Garden</button>
+    </p>
+
+
+</div>
+<h2> Produce Type </h2>
+
+<div class="btn-group" id="grpDIV2">
+
+    <p id='txt4'>
+        <button class="selection btn2 active"> Fruits</button>
+    </p>
+    <p id='txt5'>
+        <button class="selection btn2"> Vegetables</button>
+    </p>
+    <p id='txt6'>
+        <button class="selection btn2"> Fruits & Vegetables</button>
+    </p>
+
+</div>
+<h2> Select Quantity </h2>
+<div class="btn-group" id="grpDIV3">
+
+    <p id='txt7'>
+        <button class="selection btn3 active"> Feed for 1</button>
+    </p>
+    <p id='txt8'>
+        <button class="selection btn3"> Feed for 2-3</button>
+    </p>
+    <p id='txt9'>
+        <button class="selection btn3"> Feed for 4-5</button>
+    </p>
+
+</div>
+<button id="bottomright" style="height:32px;width:128px;"> Submit</button>
+<script src="seek_user.js"></script>
+<script src="jsfile.js"></script>
+
+
+</body>
 </html>

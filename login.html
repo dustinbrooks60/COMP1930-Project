@@ -1,77 +1,88 @@
 <!DOCTYPE html>
-<html>   
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title> Login form</title>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body id="wrapper">
-    <header>
-        <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
-    </header>
+<header>
+    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+</header>
 
 <nav>
     <ul>
-        <li><a href="index.html"><button class="nav_button"> Home Page </button></a></li>
-        <li><a href="login.html"><button class="nav_button"> Login </button></a></li>
-        <li class = "collapse"><button class="nav_button"> Concept </button></li>
+        <li><a href="index.html">
+            <button class="nav_button"> Home Page</button>
+        </a></li>
+        <li><a href="login.html">
+            <button class="nav_button"> Login</button>
+        </a></li>
+        <li class="collapse">
+            <button class="nav_button"> Concept</button>
+        </li>
         <div class="content">
-          <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-             Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your garden space means that you have a surplus of produce that you are willing to part with. Communal contributions help those who need it the most. ShareGarden is a non-profit organization; however, donations and contributions are required for those seeking a garden.</p>
+            <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your
+                garden space means that you have a surplus of produce that you are willing to part with. Communal
+                contributions help those who need it the most. ShareGarden is a non-profit organization; however,
+                donations and contributions are required for those seeking a garden.</p>
         </div>
-        <li class = "collapse "><button class="nav_button">  About Us</button></li>
+        <li class="collapse ">
+            <button class="nav_button"> About Us</button>
+        </li>
         <div class="content">
-          <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
+            <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
     </ul>
 </nav>
-    <script src="setup_firebase.js"></script>
-    <h1 id="firebaseui-auth-container"> </h1>
+<script src="setup_firebase.js"></script>
+<h1 id="firebaseui-auth-container"></h1>
 
-    <script>
+<script>
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
     var uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          return true;
+        callbacks: {
+            signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                // User successfully signed in.
+                // Return type determines whether we continue the redirect automatically
+                // or whether we leave that to developer to handle.
+                return true;
+            },
+            uiShown: function () {
+                // The widget is rendered.
+                // Hide the loader.
+                document.getElementById('loader').style.display = 'none';
+            }
         },
-        uiShown: function() {
-          // The widget is rendered.
-          // Hide the loader.
-          document.getElementById('loader').style.display = 'none';
-        }
-      },
-      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-      signInFlow: 'popup',
-      signInSuccessUrl: 'logged_in.html',
-      signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        //firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        //firebase.auth.PhoneAuthProvider.PROVIDER_ID
-      ],
-      // Terms of service url.
-      tosUrl: 'main.html',
-      // Privacy policy url.
-      privacyPolicyUrl: 'main.html',
-        
-      accountChooserEnabled: false
+        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+        signInFlow: 'popup',
+        signInSuccessUrl: 'logged_in.html',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+            //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: 'main.html',
+        // Privacy policy url.
+        privacyPolicyUrl: 'main.html',
+
+        accountChooserEnabled: false
     };
-    
+
     // The start method will wait until the DOM is loaded.
     // Inject the login interface into the HTML
     ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-    <script src = "create_user.js"></script>
+</script>
+<script src="create_user.js"></script>
 </body>
 </html>
