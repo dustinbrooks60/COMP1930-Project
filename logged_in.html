@@ -41,10 +41,14 @@
         </div>
     </ul>
 </nav>
+
+<h2 id="welcome"></h2>
 <script src="setup_firebase.js"></script>
 
 <button id="btnLogout" class="button"> Log Out</button>
 <button id="btnUpdateProfile" class="button" onclick="window.location.href='profile.html'"> Update Profile</button>
+
+
 <script>
     btnLogout.addEventListener("click", function (e) {
         var promise = firebase.auth().signOut();
@@ -55,6 +59,7 @@
 </script>
 
 <script src="create_user.js"></script>
+<script src ="jsfile.js"></script>
 
 </body>
 </html>
