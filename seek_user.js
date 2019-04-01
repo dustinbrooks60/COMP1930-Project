@@ -13,12 +13,12 @@
                 "Quanitity": this_array[2]
             });
     });
-})()
+})();
 
 // Add active class to the current button (highlight it)
 var group1 = document.getElementById("grpDIV1");
 var btns = group1.getElementsByClassName("btn");
-var this_array = []
+var this_array = [];
 
 function appendArray(string_text, user_array) { // make sure append max is length 3
     if (user_array.length < 3) {

@@ -1,5 +1,22 @@
 <html lang="en">
 <head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 75%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -64,7 +81,7 @@
         <td id="host">host replace</td>
         <td id="donation">donation replace</td>
     </tr>
-
+</table>
 <script src = "setup_firebase.js"></script>
 
     <h1 id ="code">Click here to get user information</h1>
@@ -109,7 +126,7 @@
     </script>
 
     <script>
-        var dbRef = firebase.database().ref().child("users/"+"fgy5KssMNcVuqldo4P126EDEDdb2/"
+        var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getItem('userid')+"/"
             +"name");
         dbRef.on("value",
             function(snapshot){
@@ -117,7 +134,7 @@
             })
 
     </script>
-    <script src = jsfile.js></script>
+    <script src = jsfile.js> </script>
 
 </body>
 </html>

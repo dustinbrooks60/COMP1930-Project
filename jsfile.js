@@ -18,15 +18,15 @@ for (i = 0; i < coll.length; i++) {
 //     var errorCode = error.code;
 //     var errorMessage = error.message;
 // });
-
+var firebase = app_firebase
 var user = firebase.auth().currentUser;
 var out = document.getElementById("welcome");
-var dbRef = firebase.database().ref().child("users/"+"fgy5KssMNcVuqldo4P126EDEDdb2/"
+var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getItem('userid')+"/"
     +"name");
 dbRef.on("value",
     function(snapshot){
         out.innerHTML = "Welcome "+ snapshot.val();
-    })
+    });
 
 
 

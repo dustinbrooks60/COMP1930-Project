@@ -50,6 +50,16 @@
 
 
 <script>
+    var firebase = app_firebase;
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            window.localStorage.setItem('userid',String(user.uid));
+            console.log('hi')
+        } else {
+            // No user is signed in.
+        }
+    });
     btnLogout.addEventListener("click", function (e) {
         var promise = firebase.auth().signOut();
         promise.then(function () {
