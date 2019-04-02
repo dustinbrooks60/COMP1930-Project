@@ -13,10 +13,24 @@
 
 </head>
 <style>
+    div{
+        display: inline;
+        margin-left: 10px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    label{
+        font-size:18px;
+    }
     #header {
         text-align: center;
         font-size: 32px;
         top: 50%;
+    }
+    #container1,
+    #container2,
+    #container3{
+        padding-bottom: 32px;
     }
 
     h2 {
@@ -122,7 +136,7 @@
 <!--</div>-->
 
 <form id="seekprofile">
-    <div>Produce Plan:
+    <div id="container1" >Produce Plan:
         <div>
         <input type="radio" class="plan" name="plan" value="pick-up-once">
         <label>Pick-up Once</label>
@@ -141,13 +155,13 @@
         </div>
 
     </div> <br>
-    <div>Produce Type:
+    <div id="container2">Produce Type:
         <div>
             <input type="radio" class="type" name="type" value="Vegetables">
             <label>Vegetables</label>
         </div>
         <div>
-            <input type="radio" id="type" name="type" value="Fruits">
+            <input type="radio" class="type" name="type" value="Fruits">
             <label>Fruits</label>
         </div>
         <div>
@@ -156,8 +170,8 @@
         </div>
 
     </div> <br>
-    Select Quantity:
-    <div>
+
+    <div id="container3">Select Quantity:
         <input type="radio" class="feed" name="quantity" value="Feed for 1">
         <label>Feed for 1</label>
     </div>

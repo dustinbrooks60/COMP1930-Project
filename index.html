@@ -2,7 +2,11 @@
 <head>
 
     <title>Share Garden Main Page</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
+
     <style>
 
 .leftcol {
@@ -28,21 +32,6 @@
 
 </style>
 
-
-
-<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCRNyjKsPc9-5T0D3NHXiqDnqU8x93XwSk",
-    authDomain: "sharegarden-d68ce.firebaseapp.com",
-    databaseURL: "https://sharegarden-d68ce.firebaseio.com",
-    projectId: "sharegarden-d68ce",
-    storageBucket: "",
-    messagingSenderId: "337652476919"
-  };
-  firebase.initializeApp(config);
-</script>
 
 </head>
 
@@ -80,7 +69,8 @@
         </ul>
     </nav>
 
-    <!--<h2 id="welcome"></h2>-->
+    <script src="setup_firebase.js"></script>
+    <h2 id="welcome"></h2>
 
 <div id="primary_div">
     <main>

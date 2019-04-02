@@ -63,6 +63,7 @@
     btnLogout.addEventListener("click", function (e) {
         var promise = firebase.auth().signOut();
         promise.then(function () {
+            window.localStorage.setItem('userid',null); //remove userid if user logout
             window.location.href = 'index.html';
         });
     });
