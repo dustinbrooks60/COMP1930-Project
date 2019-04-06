@@ -28,7 +28,29 @@ dbRef.on("value",
         out.innerHTML = "Welcome "+ snapshot.val();
     });
 
+// function to get value for user input that are grouped
+function getValue(class_elements){
+    for(let i = 0; i < class_elements.length; i++) {
+        if (class_elements[i].checked){
+            return class_elements[i].value
+        }
+    }
+}
 
+// var coll = document.getElementsByClassName("collapsible");
+// var i;
+//
+// for (i = 0; i < coll.length; i++) {
+//     coll[i].addEventListener("click", function() {
+//         this.classList.toggle("active");
+//         var content = this.nextElementSibling;
+//         if (content.style.display === "block") {
+//             content.style.display = "none";
+//         } else {
+//             content.style.display = "block";
+//         }
+//     });
+// }
 
 
 

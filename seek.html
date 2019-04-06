@@ -44,43 +44,35 @@
         height: 50px;
         margin-left: 3%;
     }
-    
-
-    
 
 </style>
 <body id="wrapper">
 <script src="setup_firebase.js"></script>
 <header>
-    <img id="toplogo" src="images/ShareGarden.png" height="512" width="512" alt="Main Logo">
+    <img id="toplogo" src="images/ShareGarden.png" alt="Main Logo">
 </header>
-
+<script src="jsfile.js"></script>
 <nav>
     <ul>
-
-        <li><a href="index.html">
+        <a href="index.html">
             <button class="nav_button"> Home Page</button>
-        </a></li>
-
-        <li><a href="login.html">
+        </a>
+        <a href="login.html">
             <button class="nav_button"> Login</button>
-        </a></li>
+        </a>
 
-        <li class="collapse">
-            <button class="nav_button"> Concept</button>
-        </li>
+        <button class="nav_button collapse"> Concept</button>
+
         <div class="content">
             <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-                User's can choose to share their garden spaces (if they have a surplus of produce) or they can look for
-                gardens to pick up produce from. Communal contributions help those who need it the most. Share Garden is
-                a non-profit organization; however, donations and contributions are required for those seeking a
-                garden.</p>
-
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing
+                your garden space means that you have a surplus of produce that you are willing to part with.
+                Communal contributions help those who need it the most. ShareGarden is a non-profit organization;
+                however, donations and contributions are required for those seeking a garden.</p>
         </div>
 
-        <li class="collapse ">
-            <button class="nav_button"> About Us</button>
-        </li>
+        <button class="nav_button collapse"> About Us</button>
+
         <div class="content">
             <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
@@ -140,23 +132,23 @@
 
 <form id="seekprofile">
     <div id="container1">Produce Plan:
-        
+
         <input type="radio" class="plan" name="plan" value="pick-up-once">
         <label>Pick-up Once</label>
-        
-        
+
+
             <input type="radio" class="plan" name="plan" value="Pick-up-weekly">
             <label>Pick-up Weekly</label>
-        
-        
+
+
             <input type="radio" class="plan" name="plan" value="Pick-up-monthly">
             <label>Pick-up Monthly</label>
-        
-        
+
+
             <input type="radio" class="plan" name="plan" value="Contribute">
             <label>Contribute to Garden</label>
-        
-    </div> 
+
+    </div>
     <br>
     <div id="container2">Produce Type:
         <div>
@@ -186,16 +178,93 @@
         <input type="radio" class="feed" name="quantity" value="Feed for 3-5">
         <label>Feed for 3 to 5</label>
     </div>
-    <br><br>
+    </div> <br><br>
+
+
+<button class="collapse">Continue</button>
+<div class="content">
+
+        <div id="container4">Donation option:
+            <div>
+                <input type="checkbox" class="donation" name="donation" value="Monthly-donation">
+                <label>Monthly donation</label>
+            </div>
+            <div>
+                <input type="checkbox" class="donation" name="donation" value="One-time-donation">
+                <label>One-time donation</label>
+            </div>
+
+        </div>
+        <br>
+        <div id="container5">Donation Amount:
+            <div>
+                <input type="checkbox" class="amount" name="amount" value="10.00">
+                <label>$10</label>
+            </div>
+            <div>
+                <input type="checkbox" class="amount" name="amount" value="25.00">
+                <label>$25</label>
+            </div>
+            <div>
+                <input type="checkbox" class="amount" name="amount" value="50.00">
+                <label>$50</label>
+            </div>
+            <div>
+                <input type="text" class="amount" name="other">
+                <label>Other amount (minimum $1):</label>
+            </div>
+
+        </div>
+        <br>
+
+        <main>
+            <h2>Select Donation Choice</h2>
+            <div>
+                <input type="radio" name="options" class="organization" value="City Farmer">
+                <label>City Farmer: <a href="http://www.cityfarmer.info/" target="_blank">Link</a></label>
+            </div>
+            <div>
+                <input type="radio" name="options" class="organization" value="Grasslands Conservation Council of British Columbia">
+                <label>Grasslands Conservation Council of British Columbia: <a
+                        href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a> </label>
+            </div>
+            <div>
+                <input type="radio" name="options" class="organization" value="Burke Mountain Naturalists">
+                <label> Burke Mountain Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a> </label>
+            </div>
+
+            <div>
+                <input type="radio" name="options" class="organization" value="Friends Uniting for Nature">
+                <label>Friends Uniting for Nature (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a> </label>
+            </div>
+            <div>
+                <input type="radio" name="options" class="organization" value="ChariTREE Foundation">
+                <label> ChariTREE Foundation: <a href="http://www.charitree-foundation.org/" target="_blank">Link</a></label>
+            </div>
+            <div>
+                <input type="radio" name="options" class="organization" value="ForestEthics Solutions Society">
+                <label> ForestEthics Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a> </label>
+            </div>
+
+            <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of
+                the options found here and provide a proof of receipt.</a>
+
+            <br>
+            <div style="padding-top: 2%">
+                <input type="submit">
+            </div>
+            <div style="padding-top: 2%">
+                <input type="reset">
+            </div>
+
+
+        </main>
+</div>
+
 </form>
+
 <script>
-    function getValue(class_elements){
-        for(let i = 0; i < class_elements.length; i++) {
-            if (class_elements[i].checked){
-                return class_elements[i].value
-            }
-        }
-    }
+
     document.getElementById('seekprofile').addEventListener('submit', submitForm);
     var firebase = app_firebase;
     function submitForm(e) {
@@ -206,9 +275,15 @@
         let plans = document.getElementsByClassName('plan');
         let producetypes =document.getElementsByClassName('type');
         let quantity = document.getElementsByClassName('feed');
+        let options = document.getElementsByClassName('donation');
+        let amount_selection = document.getElementsByClassName('amount');
+        let organizations = document.getElementsByClassName('organization');
         var plan = getValue(plans);
         var type = getValue(producetypes);
         var user_quantity = getValue(quantity);
+        var option = getValue(options);
+        var donationamount =  getValue(amount_selection);
+        var organization = getValue(organizations);
         var host = ['Raymond', 'Alex', 'Roland'];
         //console.log(set);
         //console.log(interest);
@@ -220,7 +295,10 @@
                 "quantity": user_quantity,
                 "producetype": type,
                 "produceplan": plan,
-                "host": host[Math.floor(Math.random()*host.length)]
+                "host": host[Math.floor(Math.random()*host.length)],
+                "donationoption": option,
+                "donationamount":donationamount,
+                "donationorganization": organization
             });
 
             //When the database update is done, then go to logged_in.html

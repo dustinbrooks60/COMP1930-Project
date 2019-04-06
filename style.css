@@ -156,21 +156,16 @@ width: 450px;
 border-radius: 3%;
 }
 
-
-
-
 #toplogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    height: auto;
+    /*height: auto;*/
     border-radius: 1.5%;
-
+    width: 512px;
+    height: 256px;
 }
-
-
-
 
 #primary_div {
 opacity: 0.8;
@@ -221,12 +216,13 @@ padding-right: 1%;
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 25px 45px;
+  padding: 10px 45px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+    margin-left: 3%;
 }
 
 
@@ -258,4 +254,30 @@ padding-left: 2%;
 padding-right: 2%;
 text-align: left;
 
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
 }

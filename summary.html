@@ -72,6 +72,8 @@
         <th>Contact Information</th>
         <th>Host</th>
         <th>Donation Type</th>
+        <th>Donation Amount</th>
+        <th>Donation Organization</th>
     </tr>
     <tr>
         <td id="usertype">usertype replace</td>
@@ -80,9 +82,13 @@
         <td id="contact">contact replace</td>
         <td id="host">host replace</td>
         <td id="donation">donation replace</td>
+        <td id="amount">amount replace</td>
+        <td id="organization">organization replace</td>
+
     </tr>
 </table>
 <script src = "setup_firebase.js"></script>
+<script src=jsfile.js> </script>
 
     <h1 id ="code">Click here to get user information</h1>
     <script>
@@ -101,19 +107,23 @@
     }
 
         function DisplayList(list){
-            var user_type_out = document.getElementById("usertype");
-            var produce_out = document.getElementById("producetype");
-            var quantity_out = document.getElementById("quantity");
-            var contact_out = document.getElementById("contact");
-            var host_out = document.getElementById("host");
-            var donation_out = document.getElementById("donation");
+            let user_type_out = document.getElementById("usertype");
+            let produce_out = document.getElementById("producetype");
+            let quantity_out = document.getElementById("quantity");
+            let contact_out = document.getElementById("contact");
+            let host_out = document.getElementById("host");
+            let donation_out = document.getElementById("donation");
+            let donation_amount_out = document.getElementById('amount');
+            let organization_out = document.getElementById('organization');
             contact_out.innerHTML = list['email'];
             produce_out.innerHTML = list['producetype'];
             user_type_out.innerHTML = list['produceplan'];
             host_out.innerHTML = list['host'];
-            donation_out.innerHTML = list['donation'];
+            donation_out.innerHTML = list['donationoption'];
             quantity_out.innerHTML = list['quantity'];
-            host_out.innerHTML
+            donation_amount_out.innerHTML = '$'+list['donationamount'];
+            organization_out.innerHTML = list['donationorganization'];
+
             console.log(list);
             for (x in list){
                 console.log(list[x]);
@@ -135,7 +145,6 @@
             })
 
     </script>
-    <script src = jsfile.js> </script>
 
 </body>
 </html>
