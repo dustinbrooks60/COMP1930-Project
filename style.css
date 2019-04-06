@@ -1,3 +1,8 @@
+html {
+    background: url(images/background.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
 #bottomright{
   float:right;
   margin-right: 2%;
@@ -280,4 +285,19 @@ text-align: left;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+}
+
+
+div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-width: thick;
+    opacity: 0.9;
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
 }
