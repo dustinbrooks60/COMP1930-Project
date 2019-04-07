@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShareGarden - Seek</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-
+    <link type="text/css" rel="stylesheet" href="buttons.css">
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
@@ -81,12 +81,15 @@
 </nav>
 
 <form id="seekprofile">
-    <h1 id="header"> Choose your plan </h1>
-    <div id="container1">Produce Plan:
+    <fieldset>
+        <legend> <h3 id="header"> Choose your plan </h3></legend>
+
+
+        <h3>Produce Plan</h3>
+        <div id="container1">
 
         <input type="radio" class="plan" name="plan" value="pick-up-once">
         <label>Pick-up Once</label>
-
 
             <input type="radio" class="plan" name="plan" value="Pick-up-weekly">
             <label>Pick-up Weekly</label>
@@ -100,8 +103,9 @@
 <!--            <label>Contribute to Garden</label>-->
 
     </div>
-    <br>
-    <div id="container2">Produce Type:
+
+        <h3>Produce Type</h3>
+    <div id="container2">
         <div>
             <input type="radio" class="type" name="type" value="Vegetables">
             <label>Vegetables</label>
@@ -117,7 +121,8 @@
 
     </div> <br>
 
-    <div id="container3">Select Quantity:
+        <h3>Select Quantity</h3>
+    <div id="container3">
         <input type="radio" class="feed" name="quantity" value="Feed for 1">
         <label>Feed for 1</label>
     </div>
@@ -131,7 +136,7 @@
     </div>
     <br>
 
-
+    </fieldset>
 <button class="collapse" style="margin-top: 1%;">Contribute</button>
 <div class="content">
     <main>
@@ -207,7 +212,6 @@
 
 </form>
 <script>
-
     document.getElementById('seekprofile').addEventListener('submit', submitForm);
     var firebase = app_firebase;
     function submitForm(e) {
