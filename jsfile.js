@@ -26,6 +26,9 @@ var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getIte
     +"name");
 dbRef.on("value",
     function(snapshot){
+        if (localStorage.getItem('userid') == 'null'){
+            return
+        }
         out.innerHTML = "Welcome, "+ snapshot.val();
     });
 

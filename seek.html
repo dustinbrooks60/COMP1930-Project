@@ -13,23 +13,26 @@
 
 </head>
 <style>
-    div{
+    div {
         display: inline;
         margin-left: 10px;
         font-size: 20px;
         margin-right: 20px;
     }
-    label{
-        font-size:18px;
+
+    label {
+        font-size: 18px;
     }
+
     #header {
         text-align: center;
         font-size: 32px;
         top: 50%;
     }
+
     #container1,
     #container2,
-    #container3{
+    #container3 {
         padding-bottom: 32px;
     }
 
@@ -88,8 +91,8 @@
         <h3>Produce Plan</h3>
         <div id="container1">
 
-        <input type="radio" class="plan" name="plan" value="pick-up-once">
-        <label>Pick-up Once</label>
+            <input type="radio" class="plan" name="plan" value="Pick-up-once">
+            <label>Pick-up Once</label>
 
             <input type="radio" class="plan" name="plan" value="Pick-up-weekly">
             <label>Pick-up Weekly</label>
@@ -99,49 +102,50 @@
             <label>Pick-up Monthly</label>
 
 
-<!--            <input type="radio" class="plan" name="plan" value="Contribute">-->
-<!--            <label>Contribute to Garden</label>-->
+            <!--            <input type="radio" class="plan" name="plan" value="Contribute">-->
+            <!--            <label>Contribute to Garden</label>-->
 
-    </div>
+        </div>
 
         <h3>Produce Type</h3>
-    <div id="container2">
-        <div>
-            <input type="radio" class="type" name="type" value="Vegetables">
-            <label>Vegetables</label>
-        </div>
-        <div>
-            <input type="radio" class="type" name="type" value="Fruits">
-            <label>Fruits</label>
-        </div>
-        <div>
-            <input type="radio" class="type" name="type" value="Fruits&Veggies">
-            <label>Fruits and Vegetables</label>
-        </div>
+        <div id="container2">
+            <div>
+                <input type="radio" class="type" name="type" value="Vegetables">
+                <label>Vegetables</label>
+            </div>
+            <div>
+                <input type="radio" class="type" name="type" value="Fruits">
+                <label>Fruits</label>
+            </div>
+            <div>
+                <input type="radio" class="type" name="type" value="Fruits&Veggies">
+                <label>Fruits and Vegetables</label>
+            </div>
 
-    </div> <br>
+        </div>
+        <br>
 
         <h3>Select Quantity</h3>
-    <div id="container3">
-        <input type="radio" class="feed" name="quantity" value="Feed for 1">
-        <label>Feed for 1</label>
-    </div>
-    <div>
-        <input type="radio" class="feed" name="quantity" value="Feed for 2-3">
-        <label>Feed for 2 or 3</label>
-    </div>
-    <div>
-        <input type="radio" class="feed" name="quantity" value="Feed for 3-5">
-        <label>Feed for 3 to 5</label>
-    </div>
-    <br>
+        <div id="container3">
+            <input type="radio" class="feed" name="quantity" value="Feed for 1">
+            <label>Feed for 1</label>
+        </div>
+        <div>
+            <input type="radio" class="feed" name="quantity" value="Feed for 2-3">
+            <label>Feed for 2 or 3</label>
+        </div>
+        <div>
+            <input type="radio" class="feed" name="quantity" value="Feed for 3-5">
+            <label>Feed for 3 to 5</label>
+        </div>
+        <br>
 
     </fieldset>
-<button class="collapse" style="margin-top: 1%;">Contribute</button>
-<div class="content">
-    <main>
-        <h2>Choose your donation type and choice below</h2>
-        <div id="container4">Donation option:
+    <button class="collapse" style="margin-top: 1%;">Contribute</button>
+    <div class="content">
+        <main>
+            <h2>Choose your donation type and choice below</h2>
+            <div id="container4">Donation option:
 
                 <input type="checkbox" class="donation" name="donation" value="Monthly-donation">
                 <label>Monthly donation</label>
@@ -149,10 +153,10 @@
                 <input type="checkbox" class="donation" name="donation" value="One-time-donation">
                 <label>One-time donation</label>
 
-        </div>
-        <br>
+            </div>
+            <br>
 
-        <div id="container5">Donation Amount:
+            <div id="container5">Donation Amount:
 
                 <input type="checkbox" class="amount" name="amount" value="10.00">
                 <label>$10</label>
@@ -166,36 +170,42 @@
                 <input type="text" class="amount" name="other">
                 <label>Other amount (minimum $1):</label>
 
-        </div>
-        <br>
+            </div>
+            <br>
 
             <ul style="list-style: none">
-              <li>  <input type="radio" name="options" class="organization" value="City Farmer">
-                  <a href="http://www.cityfarmer.info/" target="_blank"><label>City Farmer</label></a>
-              </li>
-                <li>
-                <input type="radio" name="options" class="organization" value="Grasslands Conservation Council of British Columbia">
-                    <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank"><label>Grasslands Conservation Council of British Columbia</label></a>
+                <li><input type="radio" name="options" class="organization" value="City Farmer">
+                    <a href="http://www.cityfarmer.info/" target="_blank"><label>City Farmer</label></a>
                 </li>
                 <li>
-                <input type="radio" name="options" class="organization" value="Burke Mountain Naturalists">
+                    <input type="radio" name="options" class="organization"
+                           value="Grasslands Conservation Council of British Columbia">
+                    <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank"><label>Grasslands
+                        Conservation Council of British Columbia</label></a>
+                </li>
+                <li>
+                    <input type="radio" name="options" class="organization" value="Burke Mountain Naturalists">
                     <a href="http://www.bmn.bc.ca/about" target="_blank"><label> Burke Mountain Naturalists </label></a>
                 </li>
                 <li>
-                <input type="radio" name="options" class="organization" value="Friends Uniting for Nature">
-                    <a href="https://www.canadahelps.org/en/charities/fraser-valley-watersheds-coalition/" target="_blank"><label>Fraser Valley Watersheds Coalition</label> </a>
+                    <input type="radio" name="options" class="organization" value="Friends Uniting for Nature">
+                    <a href="https://www.canadahelps.org/en/charities/fraser-valley-watersheds-coalition/"
+                       target="_blank"><label>Fraser Valley Watersheds Coalition</label> </a>
                 </li>
                 <li>
-                <input type="radio" name="options" class="organization" value="ChariTREE Foundation">
-                    <a href="http://www.charitree-foundation.org/" target="_blank"><label> ChariTREE Foundation</label> </a>
+                    <input type="radio" name="options" class="organization" value="ChariTREE Foundation">
+                    <a href="http://www.charitree-foundation.org/" target="_blank"><label> ChariTREE Foundation</label>
+                    </a>
                 </li>
                 <li>
 
-                <input type="radio" name="options" class="organization" value="ForestEthics Solutions Society">
-                    <a href="https://www.canadahelps.org/en/charities/better-environmentally-sound-transportation-association-best" target="_blank"><label> Better Environmentally Sound Transportation</label></a>
+                    <input type="radio" name="options" class="organization" value="ForestEthics Solutions Society">
+                    <a href="https://www.canadahelps.org/en/charities/better-environmentally-sound-transportation-association-best"
+                       target="_blank"><label> Better Environmentally Sound Transportation</label></a>
                 </li>
-            <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of
-                the options found here and provide a proof of receipt.</a>
+                <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or
+                    donate to any of
+                    the options found here and provide a proof of receipt.</a>
                 <input type="button" value="Submit PDF" style="margin-left: 2%">
             </ul>
             <br>
@@ -208,19 +218,20 @@
 
 
         </main>
-</div>
+    </div>
 
 </form>
 <script>
     document.getElementById('seekprofile').addEventListener('submit', submitForm);
     var firebase = app_firebase;
+
     function submitForm(e) {
         e.preventDefault();
         // var quantity = document.getElementsByClassName("feed").value;
         // var type_of_user = document.getElementById("type_of_user").value;
         // var produce = document.getElementById("produce").value;
         let plans = document.getElementsByClassName('plan');
-        let producetypes =document.getElementsByClassName('type');
+        let producetypes = document.getElementsByClassName('type');
         let quantity = document.getElementsByClassName('feed');
         let options = document.getElementsByClassName('donation');
         let amount_selection = document.getElementsByClassName('amount');
@@ -229,7 +240,7 @@
         var type = getValue(producetypes);
         var user_quantity = getValue(quantity);
         var option = getValue(options);
-        var donationamount =  getValue(amount_selection);
+        var donationamount = getValue(amount_selection);
         var organization = getValue(organizations);
         var host = ['Raymond', 'Alex', 'Roland'];
         //console.log(set);
@@ -238,13 +249,13 @@
 
         firebase.auth().onAuthStateChanged(function (user) {
             var userid = localStorage.getItem('userid'); //Update database with the profile info collected for the user
-            var promise = firebase.database().ref('users/' + userid+'/').update({
+            var promise = firebase.database().ref('users/' + userid + '/').update({
                 "quantity": user_quantity,
                 "producetype": type,
                 "produceplan": plan,
-                "host": host[Math.floor(Math.random()*host.length)],
+                "host": host[Math.floor(Math.random() * host.length)],
                 "donationoption": option,
-                "donationamount":donationamount,
+                "donationamount": donationamount,
                 "donationorganization": organization
             });
 
@@ -260,7 +271,7 @@
 <script src="jsfile.js"></script>
 <script>
     let submitbutton = document.getElementById('bottomright');
-    submitbutton.onclick = function(){
+    submitbutton.onclick = function () {
         window.location.href = "summary.html"
     };
 </script>
