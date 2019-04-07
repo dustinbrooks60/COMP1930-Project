@@ -1,6 +1,16 @@
 <html lang="en">
 <head>
     <style>
+
+
+        #map {
+            width: 930px;
+            height: 350px;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 12.5%;
+        }
+
         table {
             font-family: Roboto, sans-serif;
             border-collapse: collapse;
@@ -16,6 +26,55 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        #infowindow-content .title {
+            font-weight: bold;
+        }
+        #infowindow-content {
+            display: none;
+        }
+        #map #infowindow-content {
+            display: inline;
+        }
+        .pac-card {
+            margin: 10px 10px 0 0;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            font-family: Roboto;
+        }
+        #pac-container {
+            padding-bottom: 12px;
+            margin-right: 12px;
+        }
+        .pac-controls {
+            display: inline-block;
+            padding: 5px 11px;
+        }
+        .pac-controls label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+        #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+        }
+        #pac-input:focus {
+            border-color: #4d90fe;}
+
+
+
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +204,33 @@
             })
 
     </script>
-<script src = "jsfile.js"> </script>
+
+
+<div id="map"></div>
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Vancouver
+        var vancouver = {lat: 49.246292, lng: -123.116226};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 17, center: vancouver});
+        // The marker, positioned at Vancouver
+        var marker = new google.maps.Marker({position: vancouver, map: map});
+    }
+</script>
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&callback=initMap">
+</script>
+
+
+
+
 
 </body>
 </html>
