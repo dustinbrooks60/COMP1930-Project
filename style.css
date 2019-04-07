@@ -179,13 +179,14 @@ position: relative
 #png2{
     /* image size */
 
-display: block;
-margin-left:auto;
-margin-right:auto;
-max-width: 100%;
-height: 300px;
-width: 450px;
-border-radius: 3%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 100%;
+    height: 300px;
+    width: 450px;
+    border-radius: 3%;
+
 }
 
 #toplogo {
@@ -312,7 +313,8 @@ text-align: left;
 
 div.transbox {
     margin: 30px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid black;
     border-width: thick;
 }
