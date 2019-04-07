@@ -110,38 +110,39 @@
 
 <nav>
     <ul>
-        <li><a href="index.html">
+        <a href="index.html">
             <button class="nav_button"> Home Page</button>
-        </a></li>
-        <li><a href="login.html">
+        </a>
+        <a href="login.html">
             <button class="nav_button"> Login</button>
-        </a></li>
-        <li class="collapse">
-            <button class="nav_button"> Concept</button>
-        </li>
+        </a>
+
+        <button class="nav_button collapse"> Concept</button>
+
         <div class="content">
             <p>The concept of ShareGarden is to connect communities to healthy food alternatives.
-                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing your
-                garden space means that you have a surplus of produce that you are willing to part with. Communal
-                contributions help those who need it the most. ShareGarden is a non-profit organization; however,
-                donations and contributions are required for those seeking a garden.</p>
+                Users can choose to share their garden space or look for gardens to pick up produce from. Sharing
+                your garden space means that you have a surplus of produce that you are willing to part with.
+                Communal contributions help those who need it the most. ShareGarden is a non-profit organization;
+                however, donations and contributions are required for those seeking a garden.</p>
         </div>
-        <li class="collapse ">
-            <button class="nav_button"> About Us</button>
-        </li>
+
+        <button class="nav_button collapse"> About Us</button>
+
         <div class="content">
             <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
+
     </ul>
 </nav>
 
 <script src="setup_firebase.js"></script>
-<p>Enter additional profile information.</p>
+
 <form id="profile">
+    <h2>Enter additional profile information.</h2>
     Address: <input type="text" id="address" name="address"><br>
-    Type of User: <input type="checkbox" id="seeker" name="seeker" value="seeker"> Seeker
-                <input type="checkbox" id="host" name="host" value="host"> Host<br>
     Date: <input type="date" id="date" name="date"> <br><br>
+    Please check to confirm Hosting Agreement: <input type="checkbox" id="host" name="host" value="host-agreed-yes"> I Agree<br>
     <input type="submit">
 </form>
 
@@ -150,7 +151,7 @@
     function submitForm(e) {
         e.preventDefault();
         var address = document.getElementById("address").value;
-        var type_of_user = document.getElementById('host').value;
+        var host_agreed = document.getElementById('host').value;
         var date = document.getElementById("date").value;
         //console.log(set);
         //console.log(interest);
@@ -161,7 +162,7 @@
             //Update database with the profile info collected for the user
             var promise = firebase.database().ref('users/' + user.uid).update({
                 "Address": address,
-                "usertype": type_of_user,
+                "host-agreed": host_agreed,
                 "date": date
             });
             //When the database update is done, then go to logged_in.html

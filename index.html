@@ -7,31 +7,6 @@
     <link href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
 
-    <style>
-
-.leftcol {
-    float:left;
-    width: 30%;
-    margin-left: 15%;
-    margin-top: 3%;
-    margin-bottom: 10%;
-}
-
-.rightcol {
-
-    float: right;
-    width: 30%;
-    margin-right: 15%;
-    margin-top: 3%;
-    margin-bottom: 15%;
-}
-
-#id5{
-  display: inline-block;
-}
-
-</style>
-
 </head>
 
 
@@ -42,7 +17,7 @@
     </header>
 
     <nav>
-        <ul>
+    <ul>
             <a href="index.html">
                 <button class="nav_button"> Home Page</button>
             </a>
@@ -65,7 +40,8 @@
             <div class="content">
                 <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
             </div>
-        </ul>
+
+    </ul>
     </nav>
 
     <script src="setup_firebase.js"></script>
@@ -73,14 +49,13 @@
 <div id="primary_div" class="transbox">
     <h2 id="welcome"></h2>
 
-
         <div class="leftcol">
             <p style="text-align: center;">
 <br> Have an excess of produce? <br> This option is for owners of gardens, green spaces, and farm
 land that want to contribute their extra produce to a good cause.
     </p>
 
-        <button id = "id5"> Host </button>
+            <a href="profile.html"> <button id = "id5"> Host </button> </a>
         <img alt = "Hosting Garden" id = "png1" src ="images/host.png">
         </div>
 
@@ -93,11 +68,10 @@ land that want to contribute their extra produce to a good cause.
     <a href = "seek.html"> <button id = "id6"> Seek Garden</button> </a>
     <img alt = "Seeking Garden" id = "png2" src = "images/seek.png">
 
-
-
     </div>
 
-<script src = "jsfile.js"> </script>
+</div>
+<script src="jsfile.js"> </script>
 
 </body>
 </html>

@@ -39,14 +39,39 @@
         <div class="content">
             <p>Website created by Dustin Brooks, Allen Wong, and Iris Chow</p>
         </div>
+
     </ul>
 </nav>
 
-<h2 id="welcome"></h2>
 <script src="setup_firebase.js"></script>
 
-<button id="btnLogout" class="button"> Log Out</button>
-<button id="btnUpdateProfile" class="button" onclick="window.location.href='profile.html'"> Update Profile</button>
+<div id="primary_div" class="transbox">
+    <h2 id="welcome"></h2>
+
+    <div class="leftcol">
+        <p style="text-align: center;">
+            <br> Have an excess of produce? <br> This option is for owners of gardens, green spaces, and farm
+            land that want to contribute their extra produce to a good cause.
+        </p>
+
+        <a href="profile.html"> <button id = "id5"> Host </button> </a>
+        <img alt = "Hosting Garden" id = "png1" src ="images/host.png">
+    </div>
+
+    <div class="rightcol">
+        <p style="text-align: center;">
+            <br> Looking for home-grown and fresh produce? This option is for those seeking a garden that has all the healthy food options that they don't have regular access to.
+        </p>
+
+
+        <a href = "seek.html"> <button id = "id6"> Seek Garden</button> </a>
+        <img alt = "Seeking Garden" id = "png2" src = "images/seek.png">
+
+    </div>
+    <button id="btnLogout" class="button"> Log Out</button>
+    <button id="btnUpdateProfile" class="button" onclick="window.location.href='profile.html'"> Update Profile</button>
+
+</div>
 
 
 <script>
@@ -55,9 +80,12 @@
         if (user) {
             // User is signed in.
             window.localStorage.setItem('userid',String(user.uid));
-            console.log('hi')
+            console.log(String(user.uid))
+            window.localStorage.setItem('userid',String(user.uid));
         } else {
             // No user is signed in.
+            window.localStorage.setItem('userid',String(user.uid));
+            // console.log(String(user.uid))
         }
     });
     btnLogout.addEventListener("click", function (e) {
@@ -71,6 +99,7 @@
 
 <script src="create_user.js"></script>
 <script src ="jsfile.js"></script>
+
 
 </body>
 </html>
