@@ -4,7 +4,7 @@
     <title>Share Garden Main Page</title>
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
+    <link href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" rel="stylesheet" type="text/css"/>
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <style>
@@ -38,7 +38,7 @@
 
 <body id="wrapper">
     <header>
-        <img id="toplogo" src="images/ShareGarden.png" alt="Main Logo">
+        <img alt="Main Logo" id="toplogo" src="images/ShareGarden.png">
     </header>
 
     <nav>
@@ -70,33 +70,31 @@
 
     <script src="setup_firebase.js"></script>
 
-    <div class="transbox">
-<div id="primary_div">
+<div id="primary_div" class="transbox">
     <h2 id="welcome"></h2>
 
-    <main>
+
         <div class="leftcol">
-            <p style="text-align: center; margin-bottom: 6.4%;">
+            <p style="text-align: center;">
 <br> Have an excess of produce? <br> This option is for owners of gardens, green spaces, and farm
 land that want to contribute their extra produce to a good cause.
     </p>
 
         <button id = "id5"> Host </button>
-        <img id = "png1" src ="images/host.png" alt = "Hosting Garden">
+        <img alt = "Hosting Garden" id = "png1" src ="images/host.png">
         </div>
 
         <div class="rightcol">
     <p style="text-align: center;">
         <br> Looking for home-grown and fresh produce? This option is for those seeking a garden that has all the healthy food options that they don't have regular access to.
     </p>
-        </div>
+
 
     <a href = "seek.html"> <button id = "id6"> Seek Garden</button> </a>
-    <img id = "png2" src = "images/seek.png" alt = "Seeking Garden">
-    </div>
+    <img alt = "Seeking Garden" id = "png2" src = "images/seek.png">
 
 
-    </main>
+
     </div>
 
 <script src = "jsfile.js"> </script>
