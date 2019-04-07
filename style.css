@@ -2,14 +2,23 @@ html {
     background: url(images/background.jpeg) no-repeat center center fixed;
     background-size: cover;
 }
-
+#table{
+    background-color: whitesmoke;
+}
+form#seekprofile{
+    opacity: 0.9;
+    background-color: whitesmoke;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 #bottomright{
   float:right;
   margin-right: 2%;
 }
 button:hover{
   background-color: grey; /* Green */
-  color: green;
+  color: whitesmoke;
   cursor: pointer;
 }
 .btn-group button{

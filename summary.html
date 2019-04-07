@@ -59,12 +59,10 @@
         </div>
     </ul>
 </nav>
+<script src = "setup_firebase.js"></script>
 
-<h2 id="welcome"></h2>
-
-<h2>Your Summary</h2>
-
-<table>
+<table id="table">
+    <h2 id="summary" style="color: whitesmoke"></h2>
     <tr>
         <th>User Type</th>
         <th>Produce Type</th>
@@ -76,25 +74,23 @@
         <th>Donation Organization</th>
     </tr>
     <tr>
-        <td id="usertype">usertype replace</td>
-        <td id="producetype">produce replace</td>
-        <td id="quantity">quantity replace</td>
-        <td id="contact">contact replace</td>
-        <td id="host">host replace</td>
-        <td id="donation">donation replace</td>
-        <td id="amount">amount replace</td>
-        <td id="organization">organization replace</td>
+        <td id="usertype"></td>
+        <td id="producetype"></td>
+        <td id="quantity"></td>
+        <td id="contact"></td>
+        <td id="host"></td>
+        <td id="donation"></td>
+        <td id="amount"></td>
+        <td id="organization"></td>
 
     </tr>
 </table>
-<script src = "setup_firebase.js"></script>
-<script src=jsfile.js> </script>
 
-    <h1 id ="code">Click here to get user information</h1>
+<!--    <h1 id ="code">Click here to get user information</h1>-->
     <script>
-        document.getElementById("code").addEventListener("click", function(){
-            GetUser(localStorage.getItem('userid'))
-        });
+        // document.getElementById("code").addEventListener("click", function(){
+        //
+        // });
         
         function GetUser(username){
             console.log(username);
@@ -134,6 +130,7 @@
             // para.appendChild(node);
             }
         }
+        GetUser(localStorage.getItem('userid'))
     </script>
 
     <script>
@@ -145,6 +142,7 @@
             })
 
     </script>
+<script src = "jsfile.js"> </script>
 
 </body>
 </html>

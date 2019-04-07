@@ -80,57 +80,8 @@
     </ul>
 </nav>
 
-<h1 id="header"> Choose your plan </h1>
-<!--<h2> Produce Plan </h2>-->
-<!--<div class="btn-group" id="grpDIV1">-->
-
-
-    <!--<p id='txt0'>-->
-        <!--<button class="selection active btn">Pick-up Once</button>-->
-    <!--</p>-->
-    <!--<p id='txt1'>-->
-        <!--<button class="selection btn"> Pick-up Weekly</button>-->
-    <!--</p>-->
-    <!--<p id='txt2'>-->
-        <!--<button class="selection btn"> Pick-up Monthly</button>-->
-    <!--</p>-->
-    <!--<p id='txt3'>-->
-        <!--<button class="selection btn"> Contribute to Garden</button>-->
-    <!--</p>-->
-
-
-<!--</div>-->
-<!--<h2> Produce Type </h2>-->
-
-<!--<div class="btn-group" id="grpDIV2">-->
-
-    <!--<p id='txt4'>-->
-        <!--<button class="selection btn2 active"> Fruits</button>-->
-    <!--</p>-->
-    <!--<p id='txt5'>-->
-        <!--<button class="selection btn2"> Vegetables</button>-->
-    <!--</p>-->
-    <!--<p id='txt6'>-->
-        <!--<button class="selection btn2"> Fruits & Vegetables</button>-->
-    <!--</p>-->
-
-<!--</div>-->
-<!--<h2> Select Quantity </h2>-->
-<!--<div class="btn-group" id="grpDIV3">-->
-
-    <!--<p id='txt7'>-->
-        <!--<button class="selection btn3 active"> Feed for 1</button>-->
-    <!--</p>-->
-    <!--<p id='txt8'>-->
-        <!--<button class="selection btn3"> Feed for 2-3</button>-->
-    <!--</p>-->
-    <!--<p id='txt9'>-->
-        <!--<button class="selection btn3"> Feed for 4-5</button>-->
-    <!--</p>-->
-
-<!--</div>-->
-
 <form id="seekprofile">
+    <h1 id="header"> Choose your plan </h1>
     <div id="container1">Produce Plan:
 
         <input type="radio" class="plan" name="plan" value="pick-up-once">
@@ -145,8 +96,8 @@
             <label>Pick-up Monthly</label>
 
 
-            <input type="radio" class="plan" name="plan" value="Contribute">
-            <label>Contribute to Garden</label>
+<!--            <input type="radio" class="plan" name="plan" value="Contribute">-->
+<!--            <label>Contribute to Garden</label>-->
 
     </div>
     <br>
@@ -178,83 +129,76 @@
         <input type="radio" class="feed" name="quantity" value="Feed for 3-5">
         <label>Feed for 3 to 5</label>
     </div>
-    </div> <br><br>
+    <br>
 
 
-<button class="collapse">Continue</button>
+<button class="collapse">Contribute</button>
 <div class="content">
-
+    <main>
+        <h2>Choose your donation type and choice below</h2>
         <div id="container4">Donation option:
-            <div>
+
                 <input type="checkbox" class="donation" name="donation" value="Monthly-donation">
                 <label>Monthly donation</label>
-            </div>
-            <div>
+
                 <input type="checkbox" class="donation" name="donation" value="One-time-donation">
                 <label>One-time donation</label>
-            </div>
 
         </div>
         <br>
+
         <div id="container5">Donation Amount:
-            <div>
+
                 <input type="checkbox" class="amount" name="amount" value="10.00">
                 <label>$10</label>
-            </div>
-            <div>
+
                 <input type="checkbox" class="amount" name="amount" value="25.00">
                 <label>$25</label>
-            </div>
-            <div>
+
                 <input type="checkbox" class="amount" name="amount" value="50.00">
                 <label>$50</label>
-            </div>
-            <div>
+
                 <input type="text" class="amount" name="other">
                 <label>Other amount (minimum $1):</label>
-            </div>
 
         </div>
         <br>
 
-        <main>
-            <h2>Select Donation Choice</h2>
-            <div>
-                <input type="radio" name="options" class="organization" value="City Farmer">
-                <label>City Farmer: <a href="http://www.cityfarmer.info/" target="_blank">Link</a></label>
-            </div>
-            <div>
+            <ul style="list-style: none">
+              <li>  <input type="radio" name="options" class="organization" value="City Farmer">
+                  <a href="http://www.cityfarmer.info/" target="_blank"><label>City Farmer</label></a>
+              </li>
+                <li>
                 <input type="radio" name="options" class="organization" value="Grasslands Conservation Council of British Columbia">
-                <label>Grasslands Conservation Council of British Columbia: <a
-                        href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank">Link</a> </label>
-            </div>
-            <div>
+                    <a href="http://www.bcgrasslands.org/index.php/index.php.info/" target="_blank"><label>Grasslands Conservation Council of British Columbia</label></a>
+                </li>
+                <li>
                 <input type="radio" name="options" class="organization" value="Burke Mountain Naturalists">
-                <label> Burke Mountain Naturalists: <a href="http://www.bmn.bc.ca/about" target="_blank">Link</a> </label>
-            </div>
-
-            <div>
+                    <a href="http://www.bmn.bc.ca/about" target="_blank"><label> Burke Mountain Naturalists </label></a>
+                </li>
+                <li>
                 <input type="radio" name="options" class="organization" value="Friends Uniting for Nature">
-                <label>Friends Uniting for Nature (FUN): <a href="http://www.funsociety.ca/" target="_blank">Link</a> </label>
-            </div>
-            <div>
+                    <a href="https://www.canadahelps.org/en/charities/fraser-valley-watersheds-coalition/" target="_blank"><label>Fraser Valley Watersheds Coalition</label> </a>
+                </li>
+                <li>
                 <input type="radio" name="options" class="organization" value="ChariTREE Foundation">
-                <label> ChariTREE Foundation: <a href="http://www.charitree-foundation.org/" target="_blank">Link</a></label>
-            </div>
-            <div>
-                <input type="radio" name="options" class="organization" value="ForestEthics Solutions Society">
-                <label> ForestEthics Solutions Society: <a href="http://foresethicssolutions.org" target="_blank">Link</a> </label>
-            </div>
+                    <a href="http://www.charitree-foundation.org/" target="_blank"><label> ChariTREE Foundation</label> </a>
+                </li>
+                <li>
 
+                <input type="radio" name="options" class="organization" value="ForestEthics Solutions Society">
+                    <a href="https://www.canadahelps.org/en/charities/better-environmentally-sound-transportation-association-best" target="_blank"><label> Better Environmentally Sound Transportation</label></a>
+                </li>
             <a href="https://www.canadahelps.org/en/explore/charities/category/environment" target="_blank"> Or donate to any of
                 the options found here and provide a proof of receipt.</a>
-
+                <input type="button" value="Submit PDF" style="margin-left: 2%">
+            </ul>
             <br>
             <div style="padding-top: 2%">
-                <input type="submit">
+                <input type="submit" value="Submit form">
             </div>
             <div style="padding-top: 2%">
-                <input type="reset">
+                <input type="reset" value="Reset form">
             </div>
 
 
@@ -262,7 +206,6 @@
 </div>
 
 </form>
-
 <script>
 
     document.getElementById('seekprofile').addEventListener('submit', submitForm);
@@ -308,7 +251,7 @@
         });
     };
 </script>
-<button id="bottomright" style="height:32px;width:128px;"> Submit</button>
+
 <script src="seek_user.js"></script>
 <script src="jsfile.js"></script>
 <script>

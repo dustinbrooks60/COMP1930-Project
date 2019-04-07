@@ -21,11 +21,17 @@ for (i = 0; i < coll.length; i++) {
 // var firebase = app_firebase;
 var user = firebase.auth().currentUser;
 var out = document.getElementById("welcome");
+var out2 = document.getElementById("summary");
 var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getItem('userid')+"/"
     +"name");
 dbRef.on("value",
     function(snapshot){
-        out.innerHTML = "Welcome "+ snapshot.val();
+        out.innerHTML = "Welcome, "+ snapshot.val();
+    });
+
+dbRef.on("value",
+    function(snapshot){
+        out2.innerHTML = "Here's your summary, "+ snapshot.val();
     });
 
 // function to get value for user input that are grouped
