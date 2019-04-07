@@ -60,4 +60,8 @@ legend{
     padding-left: 2px;
     padding-right: 2px;
     border: none;
+    font-size: 32px;
+    line-height: 2em;
+    background-color: whitesmoke;
+    color: black;
 }
