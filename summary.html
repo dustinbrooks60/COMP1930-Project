@@ -83,7 +83,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
 
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
 </head>
@@ -94,12 +94,12 @@
 
 
 <nav>
-    <ul>
+    <ul id='nav-ul'>
         <a href="index.html">
             <button class="nav_button"> Home Page</button>
         </a>
         <a href="login.html">
-            <button class="nav_button"> Login</button>
+            <button class="nav_button" id="sign-user"> Login</button>
         </a>
 
         <button class="nav_button collapse"> Concept</button>
@@ -121,7 +121,7 @@
     </ul>
 </nav>
 
-<script src = "setup_firebase.js"></script>
+<script src = "assets/setup_firebase.js"></script>
 
 <table id="table" align = "center">
     <h2 id="summary"></h2>
@@ -147,6 +147,7 @@
 
     </tr>
 </table>
+
 
 <!--    <h1 id ="code">Click here to get user information</h1>-->
     <script>
@@ -229,8 +230,8 @@
 </script>
 
 
-<script src="jsfile.js"></script>
-
+<script src="assets/jsfile.js"></script>
+<script src="login_persistence.js"></script>
 
 </body>
 </html>

@@ -5,7 +5,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" rel="stylesheet" type="text/css"/>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
 
     <style>
         div img {
@@ -23,12 +23,12 @@
     </header>
 
     <nav>
-    <ul>
+    <ul id="nav-ul">
             <a href="index.html">
                 <button class="nav_button"> Home Page</button>
             </a>
             <a href="login.html">
-                <button class="nav_button"> Login</button>
+                <button class="nav_button" id="sign-user"> Login</button>
             </a>
 
                 <button class="nav_button collapse"> Concept</button>
@@ -50,7 +50,7 @@
     </ul>
     </nav>
 
-    <script src="setup_firebase.js"></script>
+    <script src="assets/setup_firebase.js"></script>
 
 <div id="primary_div" class="transbox">
     <h2 id="welcome"></h2>
@@ -77,7 +77,8 @@ land that want to contribute their extra produce to a good cause.
     </div>
 
 </div>
-<script src="jsfile.js"> </script>
+<script src="assets/create_user.js"></script>
+<script src="assets/jsfile.js"> </script>
 
 </body>
 </html>

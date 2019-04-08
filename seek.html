@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShareGarden - Seek</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" href="buttons.css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="assets/buttons.css">
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
@@ -50,18 +50,18 @@
 
 </style>
 <body id="wrapper">
-<script src="setup_firebase.js"></script>
+<script src="assets/setup_firebase.js"></script>
 <header>
     <img id="toplogo" src="images/ShareGarden.png" alt="Main Logo">
 </header>
-<script src="jsfile.js"></script>
+<script src="assets/jsfile.js"></script>
 <nav>
-    <ul>
+    <ul id="nav-ul">
         <a href="index.html">
             <button class="nav_button"> Home Page</button>
         </a>
         <a href="login.html">
-            <button class="nav_button"> Login</button>
+            <button class="nav_button" id="sign-user"> Login</button>
         </a>
 
         <button class="nav_button collapse"> Concept</button>
@@ -267,14 +267,7 @@
     };
 </script>
 
-<script src="seek_user.js"></script>
-<script src="jsfile.js"></script>
-<script>
-    let submitbutton = document.getElementById('bottomright');
-    submitbutton.onclick = function () {
-        window.location.href = "summary.html"
-    };
-</script>
+<script src="assets/jsfile.js"></script>
 
 
 </body>

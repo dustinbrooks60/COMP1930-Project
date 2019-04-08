@@ -8,7 +8,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/style.css"/>
 
 
     <style>
@@ -87,12 +87,12 @@
 </header>
 
 <nav>
-    <ul>
+    <ul id="nav-ul">
         <a href="index.html">
             <button class="nav_button"> Home Page</button>
         </a>
         <a href="login.html">
-            <button class="nav_button"> Login</button>
+            <button class="nav_button" id="sign-user"> Login</button>
         </a>
 
         <button class="nav_button collapse"> Concept</button>
@@ -114,7 +114,7 @@
     </ul>
 </nav>
 
-<script src="setup_firebase.js"></script>
+<script src="assets/setup_firebase.js"></script>
 
 <form id="profile">
     <h2>Enter additional profile information.</h2>
@@ -268,7 +268,7 @@
     }
 </script>
 
-<script src="jsfile.js"></script>
+<script src="assets/jsfile.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhjele-xa2sB7oFRQN9DUrdpKq5VJbfWw&libraries=places&callback=initMap"
         async defer></script>
 
