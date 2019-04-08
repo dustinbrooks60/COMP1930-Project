@@ -244,7 +244,7 @@
                 "donationorganization": organization
             });
 
-            //When the database update is done, then go to logged_in.html
+            //When the submits the form, update firebase, then go to summary.html
             promise.then(function () {
                 window.location.href = "summary.html";
             });

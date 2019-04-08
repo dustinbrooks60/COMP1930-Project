@@ -1,6 +1,6 @@
 var coll = document.getElementsByClassName("collapse");
 var i;
-
+// column collapse function if user wants to expand buttons "about us" and "concept", + "contribute"
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -21,7 +21,7 @@ var dbRef = firebase.database().ref().child("users/"+ window.localStorage.getIte
 dbRef.on("value",
     function(snapshot){
         if (localStorage.getItem('userid') == null || localStorage.getItem('userid') == 'null' ){
-            // out.innerHTML = "Welcome, "+ 'Bob Ross';
+            // if user is null or "null", dont show anything on the page
             return
         }else {
             out.innerHTML = "Welcome, " + snapshot.val();
@@ -31,14 +31,14 @@ dbRef.on("value",
 dbRef.on("value",
     function(snapshot){
         if (localStorage.getItem('userid') == null || localStorage.getItem('userid') == 'null' ){
-            // out2.innerHTML = "Here's your summary, " + 'Bob Ross';
+            // if user is null or "null", no replacing of innerHTML
             return
         }else {
             out2.innerHTML = "Here is your summary, " + snapshot.val();
         }
     });
 
-// function to get value for user input that are grouped
+// function to get value for user input that are grouped in classes
 function getValue(class_elements){
     for(let i = 0; i < class_elements.length; i++) {
         if (class_elements[i].checked){
@@ -56,7 +56,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(String(user.uid));
         let element = document.getElementById('sign-user'); // remove login button if user is logged in
         element.parentNode.removeChild(element);
-
+        // if user is signed in, replace login button with sign-out button
         let signout_button = document.createElement('button');
         let text = document.createTextNode('Sign out');
         signout_button.appendChild(text);

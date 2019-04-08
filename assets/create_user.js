@@ -1,5 +1,5 @@
 (function(){
-
+// write into firebase when user logs in with name and email
     var firebase = app_firebase;
 
     // for the current user
