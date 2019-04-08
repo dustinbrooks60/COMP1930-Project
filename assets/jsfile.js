@@ -34,7 +34,7 @@ dbRef.on("value",
             // out2.innerHTML = "Here's your summary, " + 'Bob Ross';
             return
         }else {
-            out2.innerHTML = "Here's your summary, " + snapshot.val();
+            out2.innerHTML = "Here is your summary, " + snapshot.val();
         }
     });
 
@@ -58,7 +58,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         element.parentNode.removeChild(element);
 
         let signout_button = document.createElement('button');
-        let text = document.createTextNode('Sign-out');
+        let text = document.createTextNode('Sign out');
         signout_button.appendChild(text);
         signout_button.setAttribute('id', 'btnLogout');
         signout_button.setAttribute('class','nav_button');
